@@ -1,0 +1,758 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* html {
+  height: 100%;
+} */
+
+#menu {
+  background: #000000;
+  color: #fff;
+  height: 60px;
+  padding-right: 50px;
+}
+
+.logo-text{
+  display: block;
+  line-height: 60px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+}
+#menu ul,
+#menu li {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  padding-left: 1%;
+}
+#menu ul{
+  padding-left: 10%;
+  width: 100%;
+}
+
+#menu .logo-text{
+  padding-right: 15%;
+}
+
+#menu .logo-symbol{
+  font-size: .6em;
+  right: -0.7em;
+}
+
+#menu .menu-button{
+  margin-left: 20vh;
+  padding: 0;
+  margin-bottom: 0;
+
+}
+
+#menu li {
+  display: inline-flex;
+}
+#menu a {
+  display: block;
+  line-height: 45px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+#menu a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+}
+#menu li a:hover {
+  color: #0099cc;
+  text-decoration: underline;
+}
+#menu input {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+#menu label {
+  display: none;
+  line-height: 45px;
+  position: absolute;
+}
+#menu label:before {
+  font-size: 1.6em;
+  content: "\2261";
+  margin-left: 20px;
+}
+#menu ul.sub-menus {
+  height: auto;
+  margin-top: 45px;
+  overflow: hidden;
+  width: fit-content;
+  background: #444444;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+#menu ul.sub-menus li {
+  display: block;
+  width: 100%;
+}
+#menu ul.sub-menus a {
+  color: #ffffff;
+  font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+  display: block;
+  justify-items: center;
+}
+#menu ul.sub-menus a:hover {
+  padding-left: 50px;
+  padding-right: 50px;
+  background: #f2f2f2;
+  color: #444444;
+}
+.logo {
+  position: relative;
+  height: 43px;
+  display: flex;
+  flex-direction: end;
+  justify-content: space-between;
+}
+@media screen and (max-width: 800px) {
+  #menu label {
+    display: none;
+    line-height: 45px;
+    text-align: right;
+    position: absolute;
+    /* left: auto; */
+    right: 40px; /* Added */
+  }
+  #menu {
+    position: relative;
+  }
+  #menu ul {
+    background: #111;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    height: auto;
+    display: none;
+  }
+  #menu ul.sub-menus {
+    width: 100%;
+    position: static;
+  }
+  #menu ul.sub-menus a {
+    padding-left: 30px;
+  }
+  #menu li {
+    display: block;
+    float: none;
+    width: auto;
+  }
+  #menu input,
+  #menu label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  #menu input {
+    z-index: 4;
+  }
+  #menu input:checked + label {
+    color: #0099cc;
+  }
+  #menu input:checked + label:before {
+    content: "\00d7";
+  }
+  #menu input:checked ~ ul {
+    display: block;
+  }
+  #menu .menu-button{
+  display: block;
+  padding-top: 0; 
+  padding-bottom: 10%;
+  margin-left: 20px;
+  margin-top: 5px; 
+}
+}
+
+.para {
+  display: inline-block;
+  margin-left: 10%;
+  padding: 0;
+  background-color: white;
+  /* width: 100%; */
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+.para label {
+  font-size: 18vh;
+  line-height: 0.9;
+  /* font-stretch: ultra-expanded; */
+  margin-bottom: 10%;
+  padding-bottom: 20%;
+  font-weight: 700;
+  width: 40%;
+}
+
+
+.btn:hover {
+  background-color: #d9e017;
+}
+
+.para p {
+  width: 70%;
+  font-size: 4vh;
+  padding: 0;
+  margin: 5px;
+  inline-size: 1;
+  font-weight: 50;
+  opacity: 80%;
+  opacity: 0.7;
+  font-stretch: ultra-expanded;
+}
+
+  .btn {
+  background-color: #f1fb53;
+  height: 40px;
+  width: 150px;
+  border-radius: 15px;
+  font-size: large;
+  color: black;
+  margin-top: 30px;
+}
+.btn a {
+  color: black;
+}
+
+.bottom {
+  display: block;
+  padding: 50px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.bottom label {
+  inline-size: 0;
+  font-size: 3.6dvw;
+  font-stretch: ultra-expanded;
+}
+
+.col {
+  background-color: #f0f0f0;
+}
+
+.parallax {
+  background-image: url("parallax.jpg");
+  /* border-radius: 50%; */
+  width: 100%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .parallax {
+    overflow-x: hidden;
+    width: 100%;
+    height: 250px;
+    margin: 0;
+  }
+  .para {
+    margin-left: 0;
+    padding: 5%;
+    margin-right: 10%;
+  }
+
+  .para label {
+    font-size: 13vw;
+    font-weight: 700;
+    padding-bottom: 0;
+  }
+
+
+
+  .para p {
+    font-size: 3.5vw;
+    /* margin-right: 10%; */
+    width: 90%;
+    padding-top: 0;
+  }
+}
+
+.follower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.4;
+  pointer-events: none; /* Make sure the cursor doesn't interfere with other elements */
+  /* z-index: 9999; */
+  /* transform: translate(-50%, -50%); */
+}
+
+.learn {
+  background-color: black;
+  color: white;
+  display: block;
+  position: relative; /* Add position relative to the container */
+}
+
+.learn hr {
+  width: 95%;
+  height: 1px;
+  border: 1px solid rgb(86, 85, 85);
+}
+
+.learn .first {
+  margin-left: 5%;
+  padding-top: 5%;
+  font-size: 9.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+}
+
+.learn .oone,
+.learn .ttwo,
+.learn .tthree,
+.learn .ffour {
+  display: inline-block;
+  margin-left: 8%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  transition: margin-left 1s, margin-top 1s;
+}
+
+.learn .hh1 {
+  width: fit-content;
+  font-size: 1.5vw;
+  padding: 5px;
+  position: relative;
+}
+
+.learn h1 {
+  width: fit-content;
+  font-size: 4vw;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+}
+.learn h1::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  height: 30%;
+  background-color: #a3a7b0;
+  opacity: 0;
+}
+
+.learn .oone:hover h1::before,
+.ttwo:hover h1::before,
+.tthree:hover h1::before {
+  opacity: 0.5;
+}
+
+.learn .ffour {
+  font-size: 2vw;
+}
+
+.learn .oone:hover,
+.learn .ttwo:hover,
+.learn .tthree:hover {
+  margin-left: 5.5%;
+  margin-top: 3%;
+}
+
+.dot-container {
+  display: block;
+  margin-top: 3%;
+}
+
+/* bigb */
+
+/* Base Styles (for all screen sizes) */
+
+.dot-container {
+  display: block;
+  margin-top: 3%;
+  padding-left: 20%;
+}
+
+.dot {
+  height: 2px;
+  width: 15px;
+  background-color: black;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.bigb {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.perma {
+  margin-top: 7px;
+}
+
+.parent {
+  display: flex;
+  margin-left: 50px;
+  margin-top: 20%;
+  font-size: 10dvb; /* Check if this value is correct, it seems unusual */
+  color: white;
+  text-indent: 20px;
+}
+
+.slideshow-container {
+  width: 100%;
+}
+
+.active,
+.dot:hover {
+  background-color: #ffffff;
+}
+
+.text {
+  padding: 8px;
+  bottom: 8px;
+  width: 100%;
+}
+
+.fade {
+  animation: fade-bottom;
+  animation-duration: 1s;
+}
+
+.parent button {
+  height: 120px;
+  width: 19%;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+  margin-left: 10%;
+}
+
+/* Responsive Styles for Phone Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .parent {
+    overflow-x: hidden;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center align items on smaller screens */
+    text-align: center; /* Center align text on smaller screens */
+    margin-left: 5%; /* Remove left margin */
+    margin-top: 30%; /* Adjust margin for smaller screens */
+    font-size: 8vh; /* Adjust font size for better readability on smaller screens */
+    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .parent button {
+    height: 100px;
+    width: 19%;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    margin-left: 10%;
+  }
+
+  .slideshow-container {
+    width: 100%; /* Make the container wider for smaller screens */
+  }
+
+  .active,
+  .dot:hover {
+    background-color: transparent; /* Remove background color on smaller screens */
+  }
+
+  .des {
+    margin-top: 15%;
+  }
+
+  .dot-container {
+    margin-top: 10%;
+    align-content: center;
+    margin-right: 15%;
+  }
+}
+
+/* next page */
+.container {
+  display: block;
+}
+
+.ptwo {
+  text-align: center;
+  display: block;
+  background-color: #fcdc49;
+  padding: 0.01cm;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.ctext {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.ctext .t1 {
+  font-size: 12dvw;
+  width: 100%;
+  font-stretch: 200%;
+  line-height: 0.8;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid white;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-menu {
+  padding: 10px;
+  font-weight: 500;
+  font-variant: normal;
+  white-space: nowrap;
+  display: inline-block;
+  width: 90%;
+  animation: scroll 15s linear infinite;
+  animation-timing-function: linear; /* Add this to ensure a continuous scroll */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.pthree {
+  background-color: #232325;
+  color: white;
+}
+
+.container.ptwo.ctext.t1.a {
+  transform: skewY(-20deg);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll2 {
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateY(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track {
+  animation: scroll 18s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slide-track-reverse {
+  animation: scroll2 18s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slide {
+  height: 100px;
+  width: 250px;
+}
+
+.stopscroll {
+  height: 100%;
+}
+
+.scrollbar {
+  overflow: auto;
+}
+
+
+.letstalk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.letstalk p {
+  position: relative;
+  bottom: -20px;
+  font-size: 180px;
+}
+/* .footer1 table{
+  left: 2%;
+} */
+.td1 {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 30%;
+}
+.anchortags {
+  position: relative;
+  top: 100px;
+  left: 45%;
+  width: 10%;
+}
+.anchortags a {
+  text-decoration: none;
+  color: black;
+  line-height: 130%;
+}
+input {
+  position: relative;
+  left: 10%;
+  bottom: 90%;
+  text-decoration: none;
+}
+.input-container {
+  margin-bottom: 3%;
+}
+input[type="email"] {
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  width: 17%;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.tablex {
+  position: relative;
+  right: 60%;
+}
+.submit {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  left: 22%;
+  bottom: 5vw;
+}
+.tabley {
+  position: relative;
+  left: 72%;
+  bottom: 130px;
+}
+.tablex {
+  position: relative;
+  left: 2.2%;
+}
+.tdy {
+  position: relative;
+  left: 2%;
+}
+
+@media screen and (max-width: 800px) {
+  .letstalk p {
+    font-size: 3.5rem;
+  }
+  .tablex td {
+    font-size: 0.8rem;
+    width: 30%;
+  }
+  .tabley {
+    position: relative;
+    position: 72%;
+  }
+  .tabley td {
+    font-size: 0.8rem;
+  }
+  .anchortags a {
+    font-size: 0.9rem;
+  }
+  .anchortags {
+    position: relative;
+    bottom: 2%;
+  }
+  input[type="email"] {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    width: 30%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+  }
+  .submit {
+    position: relative;
+    left: 20%;
+    top: 3px;
+  }
+}

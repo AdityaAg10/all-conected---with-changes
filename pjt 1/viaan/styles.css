@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+}
+
+.dot-container {
+  display: block;
+  margin-top: 3%;
+  margin-left: 10%;
+}
+
+.dot {
+  height: 2px;
+  width: 15px;
+  background-color: black;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+  
+.bigb {
+  position: fixed;
+  display: inline-block;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.perma {
+  margin-top: 7px;
+}
+
+.parent { 
+  display: flex;
+  margin-left: 50px;
+  margin-top: 20%;
+  font-size: 12dvb;
+  color: white;
+  text-indent: 20px;
+}
+
+.slideshow-container {
+  width: 40dvw;
+}
+
+.active,
+.dot:hover {
+  background-color: #ffffff;
+}
+
+.text {
+  padding: 8px;
+  bottom: 8px;
+  width: 100%;
+}
+
+.fade {
+  animation: fade-bottom;
+  animation-duration: 1s;
+}
+
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+

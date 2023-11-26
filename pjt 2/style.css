@@ -1,0 +1,842 @@
+html,
+body {
+  margin: 0;
+  background-color: #141415;
+  color: white;
+  overflow-x: hidden;
+}
+
+#menu {
+  background: #000000;
+  color: #fff;
+  height: 60px;
+  padding-right: 50px;
+}
+
+.logo-text{
+  display: block;
+  line-height: 60px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+}
+#menu ul,
+#menu li {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  padding-left: 1%;
+}
+#menu ul{
+  padding-left: 10%;
+  width: 100%;
+}
+
+#menu .logo-text{
+  padding-right: 15%;
+}
+
+#menu .logo-symbol{
+  font-size: .6em;
+  right: -0.7em;
+}
+
+#menu .menu-button{
+  margin-left: 20vh;
+  padding: 0;
+  margin-bottom: 0;
+
+}
+
+#menu li {
+  display: inline-flex;
+}
+#menu a {
+  display: block;
+  line-height: 45px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+#menu a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+}
+#menu li a:hover {
+  color: #0099cc;
+  text-decoration: underline;
+}
+#menu input {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+#menu label {
+  display: none;
+  line-height: 45px;
+  position: absolute;
+}
+#menu label:before {
+  font-size: 1.6em;
+  content: "\2261";
+  margin-left: 20px;
+}
+#menu ul.sub-menus {
+  height: auto;
+  margin-top: 45px;
+  overflow: hidden;
+  width: fit-content;
+  background: #444444;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+#menu ul.sub-menus li {
+  display: block;
+  width: 100%;
+}
+#menu ul.sub-menus a {
+  color: #ffffff;
+  font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+  display: block;
+  justify-items: center;
+}
+#menu ul.sub-menus a:hover {
+  padding-left: 50px;
+  padding-right: 50px;
+  background: #f2f2f2;
+  color: #444444;
+}
+.logo {
+  position: relative;
+  height: 43px;
+  display: flex;
+  flex-direction: end;
+  justify-content: space-between;
+}
+@media screen and (max-width: 800px) {
+  #menu label {
+    display: none;
+    line-height: 45px;
+    text-align: right;
+    position: absolute;
+    /* left: auto; */
+    right: 40px; /* Added */
+  }
+  #menu {
+    position: relative;
+  }
+  #menu ul {
+    background: #111;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    height: auto;
+    display: none;
+  }
+  #menu ul.sub-menus {
+    width: 100%;
+    position: static;
+  }
+  #menu ul.sub-menus a {
+    padding-left: 30px;
+  }
+  #menu li {
+    display: block;
+    float: none;
+    width: auto;
+  }
+  #menu input,
+  #menu label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  #menu input {
+    z-index: 4;
+  }
+  #menu input:checked + label {
+    color: #0099cc;
+  }
+  #menu input:checked + label:before {
+    content: "\00d7";
+  }
+  #menu input:checked ~ ul {
+    display: block;
+  }
+  #menu .menu-button{
+  display: block;
+  padding-top: 0; 
+  padding-bottom: 10%;
+  margin-left: 20px;
+  margin-top: 5px; 
+}
+}
+
+.aa2 {
+  display: flex;
+  width: 100%;
+  margin-left: 2.5%;
+}
+
+.a2 img {
+  margin-top: 5%;
+  margin-left: 7%;
+  border-radius: 10%;
+  height: 75vh;
+  width: 100vb;
+}
+.content1 {
+  display: block;
+  margin-left: 13%;
+  margin-right: 10%;
+  margin-top: 7%;
+  width: 100%;
+}
+.a2 .head {
+  font-size: 12vh;
+  line-height: 0.9;
+  letter-spacing: 5px;
+  margin-bottom: 20%;
+  font-family: cursive;
+  width: 100%;
+}
+.a2 .text {
+  display: block;
+  margin-right: 10vh;
+  margin-top: 10%;
+  font-size: 2.5vh;
+  line-height: 1.3;
+}
+.a2 button {
+  font-size: 2vh;
+  font-weight: 600;
+  margin-top: 1%;
+  height: 4.5vh;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: #141415;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+@media screen and (max-width: 800px) {
+  body{
+    padding-right: 2.5%;
+  }
+  .a2 .aa2 {
+    display: block;
+    align-items: center;
+    margin-top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 10%;
+  }
+  .a2 img {
+    margin-left: 0;
+    height: 60vh;
+    width: 90%;
+    /* padding-right: 5%; */
+  }
+
+  .a2 .head {
+    font-size: 8vh;
+    width: 100%;
+    letter-spacing: 3px;
+    text-align: left;
+    margin-left: 5%;
+  }
+  .a2 .text {
+    font-size: 2.8vh;
+    width: 100%;
+    font-weight: 30;
+    line-height: 1.2;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 10%;
+  }
+  .a2 .aa2 .text button {
+    margin-left: 0;
+    height: 4.5vh;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: #141415;
+    margin-top: 5%;
+    padding-left: 2%;
+    padding-right: 5%;
+  }
+  .a2 .text .consultnow .rarrow {
+    padding-left: 20px;
+  }
+  .aa2 {
+    margin-top: 4%;
+    display: flex;
+    width: 10%;
+    margin-left: 0%;
+    margin-right: 10%;
+  }
+
+  .content1 {
+    display: block;
+    margin-left: 0%;
+    margin-right: 10%;
+    margin-top: 5%;
+  }
+
+  .a2 button {
+    font-size: 2vh;
+    font-weight: 600;
+    margin-top: 1%;
+    height: 4.5vh;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: #141415;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+.gap1 {
+  height: 15vh;
+}
+
+.a2-5 {
+  margin-left: 3%;
+  margin-right: 3%;
+  font-size: 3.5vh;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  font-weight: 150;
+}
+
+#animated-text p {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#animated-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 4s ease;
+}
+
+#animated-text.show {
+  max-height: 500px; /* Adjust the value to the maximum height of the content */
+}
+
+.a3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 1%;
+  text-align: center;
+  font-size: 17vh;
+  line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: 5px;
+  margin-bottom: 5%;
+}
+@media screen and (max-width: 800px) {
+  .gap1 {
+    height: 2vh;
+  }
+  .a2-5 {
+  font-size: 2.5vh;
+  height: fit-content;
+}
+  .a3 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0%;
+    text-align: center;
+    font-size: 7vh;
+    line-height: 0.9;
+    font-weight: 300;
+  }
+}
+
+.a4 {
+  width: 100%;
+}
+.a4 .aa4 {
+  height: 0px;
+  font-weight: 0.1;
+  margin: 0;
+  margin-left: 2.5%;
+  width: 95%;
+  margin-bottom: 1%;
+}
+.a4 .collapsible {
+  padding-left: 3%;
+  background-color: #141415;
+  color: white;
+  cursor: pointer;
+  padding-bottom: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 3vh;
+}
+
+.a4 .active,
+.a4 .collapsible:hover {
+  /* font-size: 4vh; */
+  transition: transform 0.5s; /* Add a transition for smooth movement */
+}
+
+.a4 .collapsible:hover {
+  transform: translateX(50px); /* Move the text to the right by 50px on hover */
+}
+
+
+.a4 .collapsible:after {
+  float: right;
+  margin-right: 5%;
+  content: "\1F80B";
+  color: white;
+  font-weight: bold;
+  margin-left: 2%;
+}
+
+.a4 .active:after {
+  content: "\1F809";
+}
+
+.a4 .content {
+  /* margin-top: 10px; */
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  background-color: #141415;
+  color: white;
+  display: flex;
+  height: 100vh;
+}
+.a4 .content img {
+  height: 60vh;
+  width: 50vh;
+  border-radius: 10%;
+  margin-left: 30%;
+  margin-bottom: 50px;
+}
+.a4 .content p {
+  width: 100%;
+  margin-left: 50%;
+  font-size: 2.5vh;
+}
+.a4 .content .container1 {
+  font-size: 2.5vh;
+  margin-left: 50%;
+  opacity: 0.7;
+}
+
+.a4 .x1,
+.a4 .x2,
+.a4 .x3 {
+  margin-left: 50%;
+  line-height: 1.8;
+}
+
+.a4 .content button {
+  margin-top: 5%;
+  margin-left: 50%;
+  background-color: #141415;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 800px) {
+  .a4 {
+    width: 100%;
+    height: fit-content;
+  }
+  .a4 .aa4 {
+    font-weight: 0.1;
+    margin: 0;
+    margin-left: 2.5%;
+    width: 95%;
+    margin-bottom: 1%;
+  }
+  .a4 .collapsible {
+    padding-left: 3%;
+    background-color: #141415;
+    color: white;
+    cursor: pointer;
+    padding-bottom: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 3vh;
+  }
+
+  .a4 .active,
+  .a4 .collapsible:hover {
+    font-size: 4vh;
+  }
+
+  .a4 .collapsible:after {
+    float: right;
+    margin-right: 5%;
+    content: "\1F80B";
+    color: white;
+    font-weight: bold;
+    margin-left: 2%;
+  }
+
+  .a4 .active:after {
+    content: "\1F809";
+  }
+
+  .a4 .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: #141415;
+    color: white;
+    display: block;
+    height: 100vh;
+    text-align: center;
+    margin-bottom: 10%;
+  }
+  .a4 .content img {
+    height: 55vh;
+    width: 50vh;
+    border-radius: 10%;
+    margin-left: 0%;
+    margin-top: 5%;
+    /* padding-bottom: 10%; */
+  }
+  .a4 .content p {
+    text-align: left;
+    width: 100%;
+    margin-left: 0%;
+    font-size: 2.5vh;
+  }
+  .a4 .content .container1 {
+    text-align: left;
+    font-size: 2.5vh;
+    margin-left: 0%;
+    opacity: 0.7;
+  }
+  .a4 .x1,
+  .a4 .x2,
+  .a4 .x3 {
+    margin-left: 30%;
+    line-height: 0;
+  }
+
+  .a4 .content button {
+    margin-top: 5%;
+    margin-left: 0%;
+    float: left;
+    background-color: #141415;
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+  }
+}
+
+.a5 {
+  display: flex;
+  margin-top: 5%;
+  gap: 5%;
+}
+
+/* CSS for the hover effect */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-card {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  background-color: white;
+  color: black; 
+  padding: 10px;
+  text-align: center;
+  width: 45%;
+  height: 45%;
+  opacity: 0;
+  border-radius: 20%;
+  animation: fadeIn 0.2s ease 0.1s forwards; 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hover-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.hover-card button {
+  background-color: white;
+  color: black;
+  border: none;
+  height: 15%;
+  padding: 5px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.hover-card p {
+  font-size: 7vh;
+  color: black;
+  border: none;
+  padding: 5px 15px;
+  margin-top: 0%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.hover-card span {
+  font-size: 2vh;
+  color: black;
+  border: none;
+  /* padding: 5px 15px; */
+  margin-top: 0%;
+  cursor: pointer;
+}
+
+.hover-card button:hover {
+  background-color: #0056b3;
+}
+
+.image-container:hover .hover-card {
+  display: block;
+}
+
+
+#imgone {
+  margin-left: 1%;
+  height: 85vh;
+  width: 85vh;
+  border-radius: 10%;
+  border: 1px solid black;
+  border-top-right-radius: 20px;
+  transition: border-radius 0.3s ease; 
+}
+
+#imgone:hover {
+  border-radius: 20%; 
+}
+
+
+.a5 label {
+  opacity: 0.5;
+  font-size: 2.5vh;
+  font-weight: 50;
+  margin-top: 30px;
+}
+.a51 button {
+  font-size: 2.2vh;
+  margin-top: 1%;
+  margin-left: 1%;
+  border: 1px solid;
+  border-radius: 15px;
+  margin-right: 1.5%;
+  padding: 0.4%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.a51 {
+  margin-left: 5%;
+}
+
+
+
+.a52 {
+  margin-right: 10%;
+}
+
+#imgtwo {
+  height: 60vh;
+  border-radius: 20%;
+}
+.a52 button {
+  font-size: 2.2vh;
+  margin-top: 1%;
+  border: 1px solid;
+  border-radius: 15px;
+  margin-right: 1.5%;
+  padding: 0.6%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (max-width: 800px) {
+  .a5 {
+    display: block;
+    margin-top: 5%;
+  }
+  #imgone {
+    margin-left: 1%;
+    height: 40vh;
+    width: 90%;
+    border-radius: 10%;
+    border: 1px solid black;
+    border-top-right-radius: 20px;
+  }
+  #imgtwo {
+    margin-top: 10%;
+    height: 40vh;
+    border-radius: 15%;
+    margin-left: 1%;
+    width: 90%;
+  }
+  .a52 {
+    margin-left: 5%;
+  }
+}
+
+#section100 {
+  background-color: white;
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.letstalk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 3%; */
+}
+.letstalk p {
+  position: relative;
+  line-height: 0.3;
+  font-size: 180px;
+}
+
+.td1 {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 30%;
+}
+.anchortags {
+  position: relative;
+  top: 100px;
+  left: 45%;
+  width: 10%;
+}
+.anchortags a {
+  text-decoration: none;
+  color: black;
+  line-height: 130%;
+}
+input {
+  position: relative;
+  left: 10%;
+  bottom: 90%;
+  text-decoration: none;
+}
+.input-container {
+  margin-bottom: 3%;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="email"] {
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  width: 17%;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.tablex {
+  position: relative;
+  right: 60%;
+}
+.submit {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  left: 22%;
+  bottom: 5vw;
+}
+
+.tabley {
+  position: relative;
+  left: 72%;
+  bottom: 130px;
+}
+.tablex {
+  position: relative;
+  left: 2.2%;
+}
+.tdy {
+  position: relative;
+  left: 2%;
+}
+
+@media screen and (max-width: 800px) {
+  .letstalk p {
+    font-size: 3.5rem;
+  }
+  .tablex td {
+    font-size: 0.8rem;
+    width: 30%;
+  }
+  .tabley {
+    position: relative;
+    position: 72%;
+  }
+  .tabley td {
+    font-size: 0.8rem;
+  }
+  .anchortags a {
+    font-size: 0.9rem;
+  }
+  .anchortags {
+    position: relative;
+    bottom: 2%;
+  }
+  input[type="email"] {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    width: 30%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+  }
+  .submit {
+    position: relative;
+    left: 20%;
+    top: 3px;
+  }
+}

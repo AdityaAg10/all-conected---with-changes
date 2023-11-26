@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll to Change Label Text and Background Color</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Define background colors for each slide */
+      .bg-color1 {
+        background-image: url("1.jpeg");
+      }
+      .bg-color2 {
+        background-image: url("2.jpeg");
+      }
+      .bg-color3 {
+        background-image: url("3.jpeg");
+      }
+      .bg-color4 {
+        background-image: url("4.jpeg");
+      }
+      .bg-color5 {
+        background-image: url("2.jpeg");
+      }
+      .bg-color6 {
+        background-image: url("3.jpeg");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bigb">
+      <div class="parent">
+        <div class="perma">
+          <div>DESIGNING</div>
+        </div>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="text">BRANDS</div>
+            <div class="des" style="font-size: 25%; margin-left:10px;">With Brand Management</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="text">EXPERIENCES</div>
+            <div class="des" style="font-size: 25%; margin-left:10px;">
+              With Website And App Development
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="text">COMMERCE</div>
+            <div class="des" style="font-size: 25%; margin-left:10px;">
+              With E-Commerse Management
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="text">CONNECTIONS</div>
+            <div class="des" style="font-size: 25%; margin-left:10px;">With Lead Management</div>
+          </div>
+        </div>
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- The dots/circles -->
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      let canScroll = true; // Flag to control scrolling sensitivity
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        let bigb = document.querySelector(".bigb"); // Get the bigb element
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+
+        // Change background color based on slide
+        switch (slideIndex) {
+          case 1:
+            bigb.className = "bigb bg-color1";
+            break;
+          case 2:
+            bigb.className = "bigb bg-color2";
+            break;
+          case 3:
+            bigb.className = "bigb bg-color3";
+            break;
+          case 4:
+            bigb.className = "bigb bg-color4";
+            break;
+          case 5:
+            bigb.className = "bigb bg-color5";
+            break;
+          case 6:
+            bigb.className = "bigb bg-color6";
+            break;
+          default:
+            bigb.className = "bigb";
+            break;
+        }
+      }
+
+      // Add scroll wheel event listener with delay to the window object
+      window.addEventListener("wheel", (event) => {
+        if (!canScroll) return;
+        canScroll = false;
+        setTimeout(() => {
+          canScroll = true;
+        }, 1000); // Adjust the delay (in milliseconds) to control sensitivity
+        if (event.deltaY > 0) {
+          plusSlides(1); // Scroll down, go to the next slide
+        } else {
+          plusSlides(-1); // Scroll up, go to the previous slide
+        }
+      });
+    </script>
+  </body>
+</html>

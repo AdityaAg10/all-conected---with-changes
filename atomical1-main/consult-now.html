@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Submission Form</title>
+  
+
+</head>
+<body>
+  <style>
+
+
+* {
+padding: 0;
+margin: 0;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+box-sizing: border-box;
+}
+
+
+
+html {
+  /* scroll-behavior: smooth;
+  overflow-x: hidden; */
+  overflow-x: hidden;
+}
+body {
+  background-color: white;
+  /* overflow-x: hidden; */
+}
+header{
+  background-color: black;
+  color: white;
+}
+
+#menu {
+  background: #000000;
+  color: #fff;
+  height: 60px;
+  padding-right: 50px;
+}
+
+.logo-text{
+  display: block;
+  line-height: 60px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+}
+#menu ul,
+#menu li {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  padding-left: 1%;
+}
+#menu ul{
+  padding-left: 10%;
+  width: 100%;
+}
+
+#menu .logo-text{
+  padding-right: 15%;
+}
+
+#menu .logo-symbol{
+  font-size: .6em;
+  right: -0.7em;
+}
+
+#menu .menu-button{
+  margin-left: 20vh;
+  padding: 0;
+  margin-bottom: 0;
+
+}
+
+#menu li {
+  display: inline-flex;
+}
+#menu a {
+  display: block;
+  line-height: 45px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+#menu a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+}
+#menu li a:hover {
+  color: #0099cc;
+  text-decoration: underline;
+}
+#menu input {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+#menu label {
+  display: none;
+  line-height: 45px;
+  position: absolute;
+}
+#menu label:before {
+  font-size: 1.6em;
+  content: "\2261";
+  margin-left: 20px;
+}
+#menu ul.sub-menus {
+  height: auto;
+  overflow: hidden;
+  width: fit-content;
+  background: #444444;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+#menu ul.sub-menus li {
+  display: block;
+  width: 100%;
+}
+#menu ul.sub-menus a {
+  color: #ffffff;
+  font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+  display: block;
+  justify-items: center;
+}
+#menu ul.sub-menus a:hover {
+  padding-left: 50px;
+  padding-right: 50px;
+  background: #f2f2f2;
+  color: #444444;
+}
+.logo {
+  position: relative;
+  height: 43px;
+  display: flex;
+  flex-direction: end;
+  justify-content: space-between;
+}
+@media screen and (max-width: 800px) {
+  #menu label {
+    display: none;
+    line-height: 45px;
+    text-align: right;
+    position: absolute;
+    /* left: auto; */
+    right: 40px; /* Added */
+  }
+  #menu {
+    position: relative;
+  }
+  #menu ul {
+    background: #111;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    height: auto;
+    display: none;
+  }
+  #menu ul.sub-menus {
+    width: 100%;
+    position: static;
+  }
+  #menu ul.sub-menus a {
+    padding-left: 30px;
+  }
+  #menu li {
+    display: block;
+    float: none;
+    width: auto;
+  }
+  #menu input,
+  #menu label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  #menu input {
+    z-index: 4;
+  }
+  #menu input:checked + label {
+    color: #0099cc;
+  }
+  #menu input:checked + label:before {
+    content: "\00d7";
+  }
+  #menu input:checked ~ ul {
+    display: block;
+  }
+  #menu .menu-button{
+  display: block;
+  padding-top: 0; 
+  padding-bottom: 10%;
+  margin-left: 20px;
+  margin-top: 5px; 
+}
+}
+
+      
+form {
+margin-left:auto ;
+margin-right: auto;
+margin-top: 80px;
+max-width: 780px;
+/* margin:  auto; */
+padding: 20px;
+background-color: #fff;
+/* border-radius: 5px; */
+/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+border: 2px solid black;
+border-radius: 30px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea,
+form input[type="checkbox"] {
+border: none;
+border-bottom: 2px solid grey;
+outline: none;
+}
+
+label {
+display: block;
+margin-bottom: 10px;
+font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+/* border-radius: 4px; */
+}
+
+.checkbox-button input[type="checkbox"] {
+display: none;
+}
+.checkbox-button {
+  display: inline-block;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ccc;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.checkbox-button.yellow {
+  background-color: yellow;
+}
+
+input[type="submit"] {
+  width: 35%;
+  padding: 10px;
+  background-color: yellowgreen;
+  color: black;
+  font-weight: bold;
+  border: none;
+  margin-left: 32.5%;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+::placeholder{
+    font-weight: bold;
+}
+input[type="submit"]:hover {
+  background-color: rgb(161, 161, 222);
+}
+
+::-webkit-input-placeholder {
+  color: #000;
+}
+
+:-moz-placeholder {
+  color: #000;
+}
+
+::-moz-placeholder {
+  color: #000;
+}
+
+:-ms-input-placeholder {
+  color: #000;
+}
+    
+      </style>
+  <section id="section00">
+    <nav id="menu">
+      <input
+        type="checkbox"
+        id="responsive-menu"
+        onclick="updatemenu()"
+      /><label></label>
+
+        <ul>
+          <li class="logo-text">Webthree<span class="logo-symbol">®</span></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pjt3_files/index.html">About Us</a></li>
+          <li><a href="http://">Insights</a></li>
+          <li>
+            <a class="dropdown-arrow">Services</a>
+            <ul class="sub-menus">
+              <li><a href="../atomical1-main/consultancy.html">Consultancy</a></li>
+              <li><a href="../pjt 1/combined/index.html">Marketting</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li class="menu-button"><img src="img/menu2.png" style="height: 30px; padding-top: 10px;"></li>
+        </ul>
+
+    </nav>
+  </section>
+
+  <!-- <form method="post" action="/submit"> -->
+    <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+        <h1>Let's Clarify The Task</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia earum mollitia  at?</p>
+    <!-- <label for="first-name">First Name:</label> -->
+
+    <label for="checkboxes">Select Options:</label><br>
+    <div class="checkbox-container">
+        <!-- <label for="option1" class="checkbox-button">
+          <input  type="checkbox" id="option1" name="option1"> Option 1
+        </label> -->
+        <label for="option1" class="checkbox-button">
+          <input type="checkbox" id="option1" name="option1"  onclick="toggleBackground(this)"> Option 1
+        </label>
+        <!-- Add more checkboxes and labels here -->
+        <label for="option2" class="checkbox-button">
+          <input type="checkbox" id="option2" name="option2" onclick="toggleBackground(this)"> Option 2
+        </label>
+        <!-- Add more checkboxes and labels here -->
+        <label for="option3" class="checkbox-button">
+          <input type="checkbox" id="option3" name="option3" onclick="toggleBackground(this)"> Option 3
+        </label>
+        <!-- Add more checkboxes here -->
+        <label for="option4" class="checkbox-button">
+            <input type="checkbox" id="option4" name="option4" onclick="toggleBackground(this)"> Option 4
+          </label>
+
+          <label for="option5" class="checkbox-button">
+            <input type="checkbox" id="option5" name="option5" onclick="toggleBackground(this)"> Option 5
+          </label>
+      </div>
+      <br>
+
+    <input type="text" id="first-name" name="first-name" placeholder="Name" required><br><br>
+
+    <!-- <label for="company-name">Company Name:</label> -->
+    <input type="text" id="company-name" name="company-name" placeholder="Company Name" required><br><br>
+<!-- 
+    <label for="email">Email:</label> -->
+    <input type="email" id="email" name="email" placeholder="email" required><br><br>
+
+    <!-- <label for="phone">Phone Number:</label> -->
+    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required><br><br>
+
+    <!-- <label for="task-description">Briefly Describe the Task:</label><br> -->
+    <textarea id="task-description" name="task-description"  placeholder="Please provide a brief description of the task" required></textarea><br><br>
+<!-- 
+    <label for="budget">Appropriate Budget:</label> -->
+    <input type="text" id="budget" name="budget" placeholder="Appropriate Budget" required><br><br>
+
+
+
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+    function toggleBackground(checkbox) {
+    var label = checkbox.parentNode;
+    if (checkbox.checked) {
+      label.classList.add("yellow");
+    } else {
+      label.classList.remove("yellow");
+    }
+  }
+  
+  </script>
+
+</body>
+</html>
