@@ -1127,6 +1127,9 @@ input[type="email"] {
   padding-bottom: 35%;
 }
 
+.fexxc{
+  display: flex;
+}
 @media screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
@@ -1190,9 +1193,17 @@ input[type="email"] {
   height: 100px;
   border-radius: 50%;
   opacity: 0.4;
-  pointer-events: none; /* Make sure the cursor doesn't interfere with other elements */
-  /* z-index: 9999; */
-  /* transform: translate(-50%, -50%); */
+  pointer-events: none;
+}
+.follower2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .learn {

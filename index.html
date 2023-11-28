@@ -139,15 +139,25 @@
           <div class="cover2">
             <div>
               <div class="one">
-                <label class="first">18+</label>
+                <div class="fexxc">
+                <label class="first onee">1</label>
+                <label class="first">+</label>
+                </div>
                 <label class="second">Years in Buisness</label>
               </div>
               <div class="one">
-                <label class="first">250+</label>
+                <div class="fexxc">
+                <label class="first twoo">1</label>
+                <label class="first">+</label>
+                </div>
                 <label class="second">Websites & projects launched</label>
               </div>
+              <!-- 30 -->
               <div class="one">
-              <label class="first">30+</label>
+                <div class="fexxc">
+              <label class="first threee">1</label>
+              <label class="first">+</label>
+              </div>
               <label class="second">Awards & recognition</label>
             </div>
           </div>
@@ -692,5 +702,38 @@
         });
       });
     </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var controller = new ScrollMagic.Controller();
+
+    // Script for counting "18"
+    var scene1 = new ScrollMagic.Scene({
+      triggerElement: ".cover2",
+      triggerHook: "onEnter",
+      delay: 500,
+    })
+    .setTween(".cover2 .onee", { innerHTML: "18", ease: "linear", roundProps: "innerHTML" })
+    .addTo(controller);
+
+    // Script for counting "250"
+    var scene2 = new ScrollMagic.Scene({
+      triggerElement: ".cover2",
+      triggerHook: "onEnter",
+      delay: 500,
+    })
+    .setTween(".cover2 .twoo", { innerHTML: "250", ease: "linear", roundProps: "innerHTML" })
+    .addTo(controller);
+
+    // Script for counting "30"
+    var scene3 = new ScrollMagic.Scene({
+      triggerElement: ".cover2",
+      triggerHook: "onEnter",
+      delay: 500,
+    })
+    .setTween(".cover2 .threee", { innerHTML: "30", ease: "linear", roundProps: "innerHTML" })
+    .addTo(controller);
+  });
+</script>
+
   </body>
 </html>

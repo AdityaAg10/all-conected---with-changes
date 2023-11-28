@@ -291,7 +291,7 @@ text-decoration: none;
     bottom: 180px;
   }
   #x4{
-    /* height: 400vh; */
+    height: 30  0vh;
     background-color: black;
     color: white;
   }
@@ -299,7 +299,7 @@ text-decoration: none;
     height: 80vh;
   }
   .x410{
-    height: 200vh;
+    height: 230vh;
     background-color: black;
     color: white;
   }
@@ -381,7 +381,7 @@ text-decoration: none;
     width: 35%;
     background-color: #171B1D;
     border-radius: 15px;
-    height: 20%;
+    height: 50vh;
     margin-bottom: 2%;
   }
 .x4213 h5{
@@ -529,14 +529,29 @@ margin-left: 12%;
 .x427{
   /* position: relative; */
   margin-left: 12%;
-  bottom: 310px;
+  /* bottom: 310px; */
   width: 84%;
   left: 12%;
   margin-top: 7%;
-  margin-bottom: 300px;
-
+  /* margin-bottom: 0px; */
+  height: 50vh;
 }
+
+.x427 a:hover{
+  color: blueviolet;
+  font-size: larger;
+}
+.x427 a{
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border: 3px solid white;
+  padding: 2%;
+  border-radius: 20px;
+}
+
 .divd{
+  height: 10vh;
   /* display: inline-block; */
   display: flex;
   justify-content: center;
@@ -546,7 +561,7 @@ margin-left: 12%;
 .a3{
   width: 23%;
   /* background-color: #171b1d; */
-  height: 180px;
+  /* height: 180px; */
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 1px;
@@ -555,8 +570,6 @@ margin-left: 12%;
   justify-content: center;
   margin-top: 25px;
   border-radius: 12px;
-  margin: auto;
-  padding: auto;
   flex-direction: column;
   text-align: left;
 }
@@ -637,7 +650,7 @@ height: 24%;
     .x426{
         width: 90%;
         position: static;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-left: 50px;
     }
     .a2{
