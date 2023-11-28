@@ -26,7 +26,7 @@
           <li><a href="index.html">Home</a></li>
           
           <li><a href="pjt3_files/index.html">About Us</a></li>
-          <li><a href="http://">Insights</a></li>
+          <li><a href="insights/index.html">Insights</a></li>
           <li>
             <a class="dropdown-arrow">Services</a>
             <ul class="sub-menus">
@@ -712,7 +712,7 @@
       triggerHook: "onEnter",
       delay: 500,
     })
-    .setTween(".cover2 .onee", { innerHTML: "18", ease: "linear", roundProps: "innerHTML" })
+    .setTween(".cover2 .onee", 2.5, { innerHTML: "18", ease: "linear.easeNone", roundProps: "innerHTML" })
     .addTo(controller);
 
     // Script for counting "250"
@@ -721,7 +721,7 @@
       triggerHook: "onEnter",
       delay: 500,
     })
-    .setTween(".cover2 .twoo", { innerHTML: "250", ease: "linear", roundProps: "innerHTML" })
+    .setTween(".cover2 .twoo", 2.5, { innerHTML: "250", ease: "linear.easeNone", roundProps: "innerHTML" })
     .addTo(controller);
 
     // Script for counting "30"
@@ -730,7 +730,7 @@
       triggerHook: "onEnter",
       delay: 500,
     })
-    .setTween(".cover2 .threee", { innerHTML: "30", ease: "linear", roundProps: "innerHTML" })
+    .setTween(".cover2 .threee", 2.5, { innerHTML: "30", ease: "linear.easeNone", roundProps: "innerHTML" })
     .addTo(controller);
   });
 </script>

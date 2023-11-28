@@ -537,18 +537,25 @@ margin-left: 12%;
   height: 50vh;
 }
 
-.x427 a:hover{
-  color: blueviolet;
-  font-size: larger;
-}
-.x427 a{
+.x427 a {
   text-decoration: none;
   color: black;
-  background-color: white;
-  border: 3px solid white;
+  background-color: #0099cc;
+  border: 3px solid #0099cc;
   padding: 2%;
-  border-radius: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, font-size 0.3s, border 0.3s, padding 0.3s;
 }
+
+.x427 a:hover {
+  background-color: black;
+  color: white;
+  font-size: larger;
+  border: 3px solid white;
+  padding: 10px;
+  border-radius: 15px;
+}
+
 
 .divd{
   height: 10vh;
