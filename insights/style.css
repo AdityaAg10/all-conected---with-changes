@@ -29,13 +29,15 @@ header {
   padding-right: 50px;
 }
 
-.logo-text {
-  display: block;
-  line-height: 60px;
+
+#logodisapper{
+  display: none;
+   line-height: 60px;
   text-decoration: none;
   color: #ffffff;
   font-size: 25px;
 }
+
 #menu ul,
 #menu li {
   margin: 0 auto;
@@ -43,24 +45,29 @@ header {
   list-style: none;
   padding-left: 1%;
 }
-#menu ul {
+#menu ul{
   padding-left: 10%;
   width: 100%;
 }
 
-#menu .logo-text {
+#menu .logo-text1{
+  display: none;
+}
+
+#menu .logo-text{
   padding-right: 15%;
 }
 
-#menu .logo-symbol {
-  font-size: 0.6em;
+#menu .logo-symbol{
+  font-size: .6em;
   right: -0.7em;
 }
 
-#menu .menu-button {
+#menu .menu-button{
   margin-left: 20vh;
   padding: 0;
   margin-bottom: 0;
+
 }
 
 #menu li {
@@ -139,6 +146,8 @@ header {
   justify-content: space-between;
 }
 @media screen and (max-width: 800px) {
+
+
   #menu label {
     display: none;
     line-height: 45px;
@@ -191,13 +200,28 @@ header {
   #menu input:checked ~ ul {
     display: block;
   }
-  #menu .menu-button {
-    display: block;
-    padding-top: 0;
-    padding-bottom: 10%;
-    margin-left: 20px;
-    margin-top: 5px;
+  #menu .menu-button{
+  display: block;
+  padding-top: 0; 
+  padding-bottom: 10%;
+  margin-left: 20px;
+  margin-top: 5px; 
+}
+
+  #logodisapper{
+    display: none;
   }
+#menu .logo-text{
+  display: none;
+}
+
+#menu .logo-text1{
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-size: 4vh;
+}
 }
 
 #x1 {
@@ -212,7 +236,7 @@ header {
 
 .contx1 {
   display: flex;
-  gap: 20%;
+  /* gap: 20%; */
 }
 
 .x11 {
@@ -247,13 +271,92 @@ header {
 
 .x117 {
   margin-top: 2%;
-  transform: translateX(-20px);
+  /* transform: translateX(-20px); */
 }
 
 .x22 img {
   height: 65vh;
   width: 80vh;
 }
+.x23 img {
+  height: 65vh;
+  width: 80vh;
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  #x1 {
+  background-color: black;
+  height: fit-content;
+  color: white;
+  padding-top: 5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.contx1 {
+  display: block;
+  gap: 20%;
+}
+
+.x11 {
+  color: white;
+  font-size: 10vh;
+  padding-left: 10%;
+  line-height: 0.68;
+  font-weight: 800;
+}
+
+.x111 {
+  margin-left: 8vh;
+}
+.x112 {
+  margin-left: 20vh;
+}
+.x113 {
+  margin-left: 0;
+}
+.x114 {
+  padding-left: 8vh;
+}
+.x115 {
+  padding-left: 20vh;
+}
+
+.x116 {
+  padding-right: 5%;
+  padding-top: 20%;
+  font-size: 3vh;
+  line-height: 1;
+  font-weight: 100;
+  transform: translateX(-8px);
+}
+
+.x117 {
+  /* display: none; */
+  margin-top: 3%;
+  /* color: black; */
+  transform: translateX(-15px);
+}
+
+.x22 img {
+  padding-top: 20%;
+  height: 42vh;
+  width: 100%;
+  display: none;
+}
+.x23 img {
+  height: 35vh;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  width: 100%;
+  /* padding-left: 0%; */
+  padding-right: 1%;
+  transform: translateX(-5%);
+  display: block;
+}
+}
+
 
 .x2 {
   height: 100vh;
@@ -321,7 +424,6 @@ header {
 
 .item {
   width: fit-content;
-  /* height: calc(100% - 40px); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -333,16 +435,135 @@ header {
 }
 
 .item img {
-  width: 50vh;
+  width: 45vh;
   height: 200vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.text{
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.text2{
+  max-width: 50vh;
+  white-space: normal;
+}
+
+@media screen and (max-width: 800px) {
+  .x2 {
+  height: fit-content;
+  background-color: black;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.x2cont {
+  display: block;
+  gap: 10%;
+}
+
+.x2text {
+  width: 100%;
+  padding-left: 5%;
+}
+
+.x2text .x2a{
+  margin-top: 0%;
+  padding-top: 30%;
+}
+
+.x2text .x2b{
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  font-size: 4vh;
+}
+.x2text .x2c{
+  padding-right: 1%;
+}
+
+.x2text .x2d{
+  margin-top: 10%;
+  border: 2px solid white;
+  width: fit-content;
+  padding: 2%;
+  padding-left: 8%;
+  padding-right: 8%;
+  font-size: 2vh;
+}
+
+
+.items {
+  display: flex;
+  height: fit-content;
+  padding: 100px;
+  padding-left: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(0.98);
+  will-change: transform;
+  position: relative;
+  font-size: 0;
+  perspective: 500px;
+  transition: 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.items.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+}
+
+.item {
+  width: fit-content;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.15);
+  margin-left: 20px;
+}
+
+.item img {
+  width: 50vh;
+  height: 80vh;
   object-fit: cover;
   border-radius: 8px;
 }
 
 .text {
   margin-top: 10px;
-  text-align: center;
 }
+
+.text1, .text2{
+  padding-bottom: 5%;
+  opacity: 0.9;
+}
+
+.text2{
+  font-size: smaller;
+}
+
+.text3{
+  border: 1px solid white;
+  width: fit-content;
+  padding: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+}
+
 
 .x3 {
   height: fit-content;
@@ -472,6 +693,147 @@ button:hover {
   color: white;
 }
 
+@media screen and (max-width: 800px) {
+  .x3 {
+  height: fit-content;
+  background-color: black;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.x31 {
+  padding: 0;
+  padding-left: 5%;
+  font-size: 8vh;
+  padding-top: 15%;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin-top: 20px;
+  border: 6px solid #313131;
+  border-radius: 30px;
+  padding-top: 0.8%;
+  padding-bottom: 0.5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.slide1flex {
+  display: block;
+  gap: 10%;
+}
+
+.slide1cont {
+  width: 100%;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 10%;
+}
+.slide1cont .a1,
+.a2 {
+  font-size: 3vh;
+  opacity: 0.7;
+}
+.slide1cont .a3 {
+  padding-top: 1%;
+  font-size: 3.5vh;
+}
+.slide1cont .a4 {
+  padding-top: 2%;
+  font-size: 2.5vh;
+}
+
+.slide1cont .a5 {
+  font-size: 2.5vh;
+  margin-top: 5%;
+  padding: 1%;
+  border: 2px white solid;
+  border-radius: 10px;
+  width: fit-content;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-bottom: 20%;
+}
+.mySlides {
+  display: flex;
+  /* position: relative; */
+}
+.mySlides {
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slideInRight {
+  opacity: 1;
+  animation: slideInRightAnimation 0.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.x3 img {
+  padding-top: 2.5%;
+  width: 95%;
+  padding-left: 5%;
+  /* padding-right: 2.5%; */
+  height: 35vh;
+  border-radius: 10px;
+}
+
+.slide-count {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+button {
+  position: absolute;
+  bottom: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: large;
+}
+
+button.prev {
+  font-size: 2.5vh;
+  left: 30px;
+}
+
+button.next {
+  font-size: 2.5vh;
+  right: 30px;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+.slide1cont {
+  color: white;
+}
+}
+
+
 .x4 {
   height: fit-content;
   background-color: black;
@@ -524,6 +886,66 @@ button:hover {
   padding: 0;
   margin: 0;
 }
+
+
+@media screen and (max-width: 800px) {
+  .x4 {
+  height: fit-content;
+  background-color: black;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.contx41 {
+  display: flex;
+  padding-bottom: 5%;
+  padding-top: 20%;
+}
+
+.x42 {
+  padding-left: 65%;
+  padding-top: 5%;
+}
+
+.x41 {
+  padding-left: 5%;
+  font-size: 8vh;
+}
+
+.contx42 {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.contx42 .img2 {
+  height: 40vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.contx42 .img3 {
+  height: 40vh;
+  width: 50vw;
+  padding: 0;
+  margin: 0;
+}
+.contx42 .img4 {
+  height: 20vh;
+  padding: 0;
+  margin: 0;
+  width: 50vw;
+}
+
+.x42img {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+}
+
 
 .letstalk {
   display: flex;
@@ -588,7 +1010,7 @@ input[type="email"] {
   padding: 0;
   cursor: pointer;
   position: relative;
-  left: 22%;
+  left: 28%;
   bottom: 5vw;
 }
 .tabley {
@@ -603,6 +1025,9 @@ input[type="email"] {
 .tdy {
   position: relative;
   left: 2%;
+}
+.iconsx{
+  font-size: x-large;
 }
 
 @media screen and (max-width: 800px) {

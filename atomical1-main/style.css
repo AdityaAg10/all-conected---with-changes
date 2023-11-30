@@ -26,13 +26,15 @@
   padding-right: 50px;
 }
 
-.logo-text{
-  display: block;
-  line-height: 60px;
+
+#logodisapper{
+  display: none;
+   line-height: 60px;
   text-decoration: none;
   color: #ffffff;
   font-size: 25px;
 }
+
 #menu ul,
 #menu li {
   margin: 0 auto;
@@ -43,6 +45,10 @@
 #menu ul{
   padding-left: 10%;
   width: 100%;
+}
+
+#menu .logo-text1{
+  display: none;
 }
 
 #menu .logo-text{
@@ -137,6 +143,8 @@
   justify-content: space-between;
 }
 @media screen and (max-width: 800px) {
+
+
   #menu label {
     display: none;
     line-height: 45px;
@@ -195,6 +203,21 @@
   padding-bottom: 10%;
   margin-left: 20px;
   margin-top: 5px; 
+}
+
+  #logodisapper{
+    display: none;
+  }
+#menu .logo-text{
+  display: none;
+}
+
+#menu .logo-text1{
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-size: 4vh;
 }
 }
     

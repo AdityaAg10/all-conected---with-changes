@@ -21,7 +21,7 @@
           id="responsive-menu"
           onclick="updatemenu()"
         /><label></label>
-
+          <li class="logo-text1" id="logodisapper1">Webthree<span class="logo-symbol1">®</span></li>
         <ul>
           <li class="logo-text">Webthree<span class="logo-symbol">®</span></li>
           <li><a href="../index.html">Home</a></li>
@@ -45,12 +45,16 @@
 
     <section id="x1">
       <div class="contx1">
+        
         <div class="x11">
           <label class="x111">BR</label>
           <label class="x112">EAK</label>
           <label class="x113">NEW</label>
           <label class="x114">GRO</label>
           <label class="x115">UND</label>
+          <div class="x23">
+          <img src="images/img1.jpg" alt="" />
+        </div>
           <label class="x116"
             >A brand + experience design agency for those with abmition.</label
           >
@@ -75,7 +79,7 @@
                 <img src="images/i1.jpg" alt="Image 1">
                 <div class="text">
                   <label class="text1">Primasun</label>
-                  <!-- <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label> -->
+                  <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label>
                   <label class="text3">VIEW ALL</label>
                 </div>
             </div>
@@ -83,7 +87,7 @@
                 <img src="images/i2.jpg" alt="Image 2">
                 <div class="text">
                   <label class="text1">Primasun</label>
-                  <!-- <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label> -->
+                  <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label>
                   <label class="text3">VIEW ALL</label>
                 </div>
             </div>
@@ -91,7 +95,7 @@
                 <img src="images/i4.png" alt="Image 3">
                 <div class="text">
                   <label class="text1">Primasun</label>
-                  <!-- <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label> -->
+                  <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label>
                   <label class="text3">VIEW ALL</label>
                 </div>
             </div>
@@ -99,7 +103,7 @@
                 <img src="images/i6.jpg" alt="Image 4">
                 <div class="text">
                   <label class="text1">Primasun</label>
-                  <!-- <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label> -->
+                  <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label>
                   <label class="text3">VIEW ALL</label>
                 </div>
             </div>
@@ -107,7 +111,7 @@
                 <img src="images/i7.jpg" alt="Image 5">
                 <div class="text">
                   <label class="text1">Primasun</label>
-                  <!-- <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label> -->
+                  <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label>
                   <label class="text3">VIEW ALL</label>
                 </div>
             </div>
@@ -115,7 +119,7 @@
                 <img src="images/i1.jpg" alt="Image 6">
                 <div class="text">
                   <label class="text1">Primasun</label>
-                  <!-- <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label> -->
+                  <label class="text2" >Google-backed Primasun and Massive team up to launch a new website and campaign to wake the world up to the importance of good sleep.</label>
                   <label class="text3">VIEW ALL</label>
                 </div>
             </div>
@@ -405,24 +409,23 @@
 
       // Add the animation class after the transition has started
       currentSlide.addClass('slideInRight');
-
       $(".slide-count").text(slideIndex + " / " + slides.length);
     }
   });
 </script>
 
 <script>
-    const slider = document.querySelector('.items');
+  const slider = document.querySelector('.items');
   let isDown = false;
   let startX;
   let scrollLeft;
 
+  // Mouse events
   slider.addEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
     startX = e.pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
-    console.log("erreerre", scrollLeft)
   });
 
   slider.addEventListener('mouseleave', () => {
@@ -436,23 +439,18 @@
   });
 
   slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;  // stop the fn from running
+    if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - slider.offsetLeft;
     const walk = (x - startX) * 2;
     slider.scrollLeft = scrollLeft - walk;
-    
-    console.log('sdsd', scrollLeft)
-    console.log(slider.scrollLeft)
   });
 
-
-//   touchEvents
-
+  // Touch events
   slider.addEventListener('touchstart', (e) => {
     isDown = true;
     slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
+    startX = e.touches[0].pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
   });
 
@@ -467,12 +465,13 @@
   });
 
   slider.addEventListener('touchmove', (e) => {
-    if (!isDown) return;  // stop the fn from running
+    if (!isDown || e.touches.length > 1) return;
     e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
+    const x = e.touches[0].pageX - slider.offsetLeft;
     const walk = (x - startX) * 2;
     slider.scrollLeft = scrollLeft - walk;
   });
 </script>
+
   </body>
 </html>

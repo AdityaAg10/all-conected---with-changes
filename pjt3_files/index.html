@@ -23,9 +23,9 @@
           id="responsive-menu"
           onclick="updatemenu()"
         /><label></label>
-
+                <li class="logo-text1" id="logodisapper1">Webthree<span class="logo-symbol1">®</span></li>
                 <ul>
-                  <li class="logo-text">Webthree<span class="logo-symbol">®</span></li>
+                  <li class="logo-text" id="logodisapper">Webthree<span class="logo-symbol">®</span></li>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../pjt3_files/index.html">About Us</a></li>
           <li><a href="../insights/index.html">Insights</a></li>
@@ -394,7 +394,7 @@
       // Listen for the scroll event on the window
       window.addEventListener("scroll", () => {
         // Calculate the vertical scroll position
-        const scrollTop = window.scrollY - 50;
+        const scrollTop = window.scrollY - 100;
 
         // Check the scroll direction
         const scrollDirection = scrollTop > lastScrollTop ? "down" : "up";
@@ -414,7 +414,7 @@
             scrollingImage.style.transform = `translateY(${scrollTop}px)`;
           } else {
             scrollingImage.style.transform = `translateY(${
-              sectionB1Top - 50
+              sectionB1Top - 100
             }px)`;
           }
         }

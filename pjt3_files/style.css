@@ -14,13 +14,15 @@ html {
   padding-right: 50px;
 }
 
-.logo-text{
-  display: block;
-  line-height: 60px;
+
+#logodisapper{
+  display: none;
+   line-height: 60px;
   text-decoration: none;
   color: #ffffff;
   font-size: 25px;
 }
+
 #menu ul,
 #menu li {
   margin: 0 auto;
@@ -31,6 +33,10 @@ html {
 #menu ul{
   padding-left: 10%;
   width: 100%;
+}
+
+#menu .logo-text1{
+  display: none;
 }
 
 #menu .logo-text{
@@ -125,6 +131,8 @@ html {
   justify-content: space-between;
 }
 @media screen and (max-width: 800px) {
+
+
   #menu label {
     display: none;
     line-height: 45px;
@@ -184,6 +192,21 @@ html {
   margin-left: 20px;
   margin-top: 5px; 
 }
+
+  #logodisapper{
+    display: none;
+  }
+#menu .logo-text{
+  display: none;
+}
+
+#menu .logo-text1{
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-size: 4vh;
+}
 }
 
 .a1 {
@@ -203,9 +226,12 @@ html {
 .b1 img.scrolling-image {
   position: absolute;
   width: 20%;
-  height: 45%;
+  height: 50%;
+  padding-top: 0;
+  margin-top: 0;
   top: 0;
   left: 0;
+  transform: translateY(0px);
   transition: transform 0s;
 }
 .b1 .not-scrolling-image {
@@ -740,14 +766,16 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-bottom: 3%; */
+  margin-bottom: 3%;
 }
 .letstalk p {
   position: relative;
-  line-height: 0.3;
+  bottom: -20px;
   font-size: 180px;
 }
-
+/* .footer1 table{
+  left: 2%;
+} */
 .td1 {
   padding-left: 10%;
   padding-right: 10%;
@@ -797,10 +825,9 @@ input[type="email"] {
   padding: 0;
   cursor: pointer;
   position: relative;
-  left: 22%;
+  left: 28%;
   bottom: 5vw;
 }
-
 .tabley {
   position: relative;
   left: 72%;
@@ -813,6 +840,9 @@ input[type="email"] {
 .tdy {
   position: relative;
   left: 2%;
+}
+.iconsx{
+  font-size: x-large;
 }
 
 @media screen and (max-width: 800px) {
