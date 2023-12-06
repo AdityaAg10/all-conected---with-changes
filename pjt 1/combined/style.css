@@ -527,7 +527,7 @@ body {
 }
 
 /* next page */
-.container {
+.container12 {
   display: block;
 }
 
@@ -666,6 +666,11 @@ body {
 }
 
 
+#section100{
+  background-color: white;
+  height: 100vh;
+}
+
 .letstalk {
   display: flex;
   align-items: center;
@@ -783,4 +788,256 @@ input[type="email"] {
     top: 3px;
   }
   
+}
+
+
+
+
+
+.section3x {
+  height: auto;
+  background-color: black;
+  padding-top: 0%;
+  margin-top: 0;
+}
+
+.containerxyzx {
+  background-position: center;
+  background-color: black;
+  background-size: cover;
+  width: 100%;
+  height: 225px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+}
+.containerxyzx p {
+  color: white;
+  font-size: 5vw;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.containerxyzx p span.typed-text {
+  font-weight: normal;
+  color: palevioletred;
+}
+.containerxyzx p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.containerxyzx p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+.tableck1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: auto; */
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 90px;
+  /* padding: 40px; */
+  width: 70%;
+  height: auto;
+  color: #fff;
+}
+
+.tabler {
+  position: relative;
+  /* left: 7%; */
+  top: 7%;
+  width: 100%;
+}
+
+.tablehx {
+  color: #fff;
+  text-align: center;
+}
+.tablepx {
+  color: gray;
+  /* padding: 30px; */
+  text-align: center;
+}
+.h3 {
+  color: #fff;
+  font-size: larger;
+}
+.im1x {
+  width: 90%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.comefromleft {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: opacity 1s, transform 2s;
+  background-color: black;
+}
+
+.comefromright {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: opacity 1s, transform 2s;
+  background-color: black;
+}
+
+.comefromleft.active,
+.comefromright.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.design {
+  width: 80%;
+  margin-left: 10%;
+
+  align-items: center;
+}
+.design h1 {
+  position: relative;
+  width: 100%;
+  right: 4%;
+  font-size: 4vw;
+  line-height: 1.5;
+  text-align: center;
+  line-height: normal;
+  color: #fff;
+  padding: 3%;
+}
+.design p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+  color: gray;
+  width: 100%;
+  font-size: 2vw;
+  position: relative;
+  right: 2%;
+  text-align: center;
+}
+.section3y {
+  height: auto;
+  background-color: black;
+}
+.sec3im {
+  width: 80%;
+  margin-left: 9.5%;
+  position: relative;
+  top: 70px;
+}
+.section3z {
+  height: auto;
+  background-color: white;
+}
+.tablerx {
+  position: relative;
+  left: 7.5%;
+  /* top: 25.5%; */
+  width: 75%;
+  margin-top: 190px;
+  margin-bottom: 120px;
+  margin-left: 7.5%;
+  /* right: 8%; */
+}
+
+.tableimg {
+  width: 60%;
+  position: relative;
+  height: 50%;
+  bottom: 7%;
+  /* right: 8%; */
+}
+.tablehx {
+  width: 100%;
+  /* margin-right: 30px; */
+}
+.tableh1 {
+  font-size: 4vw;
+  padding: 2%;
+}
+.tablep {
+  padding: 2%;
+  font-size: 1.5vw;
+  color: gray;
+  line-height: 1.5;
+}
+
+.wrapper span {
+  color: palevioletred;
+}
+.static-txt {
+  color: white;
+}
+
+.table2 {
+  /* position: relative;
+  top: 36%;
+  left: 16%; */
+  padding: 10px;
+  width: 70%;
+  border: 2px solid gray;
+  border-radius: 12px;
+  height: 120px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+.table2 h3 {
+  padding: 10px;
+}
+.table2 p {
+  color: gray;
+  padding: 10px;
+}
+
+.pink {
+  color: palevioletred;
+}
+.divth1 {
+  /* position: relative; */
+  /* top: 32%; */
+  width: 90%;
+  margin: auto;
+  margin-bottom: 80px;
+  /* left: 5%; */
+  text-align: center;
+}
+.dspan {
+  color: aqua;
+}
+.divp {
+  font-size: 49px;
+  color: black;
+}
+.divp1 {
+  font-size: 23px;
+  color: gray;
 }
