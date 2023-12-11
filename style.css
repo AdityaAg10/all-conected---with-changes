@@ -393,11 +393,12 @@ body {
 
 #section66 {
   height: 150vh;
+  padding-bottom: 10%;
 }
 .gallery {
   border-radius: 30px;
   border: 2px solid black;
-  bottom: 595px;
+  bottom: 70%;
   width: 520px;
   height: auto;
   position: relative;
@@ -567,7 +568,7 @@ body {
 
 @media screen and (max-width: 800px) {
   #section66 {
-    height: 250vh;
+    height: 200vh;
   }
   .inpara {
     position: relative;
@@ -622,7 +623,7 @@ body {
     align-items: center;
     margin: 0;
     z-index: 0;
-    top: 10%;
+    top: 5%;
   }
 
   .arrow-btn {
@@ -773,7 +774,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3%;
+  /* margin-bottom: 3%; */
 }
 .letstalk p {
   position: relative;
@@ -791,7 +792,7 @@ p {
 .anchortags {
   position: relative;
   top: 100px;
-  left: 45%;
+  left: 42.5%;
   width: 10%;
 }
 .anchortags a {
@@ -806,7 +807,7 @@ input {
   text-decoration: none;
 }
 .input-container {
-  margin-bottom: 3%;
+  /* margin-bottom: 3%; */
 }
 label {
   display: block;
@@ -833,7 +834,7 @@ input[type="email"] {
   cursor: pointer;
   position: relative;
   left: 28%;
-  bottom: 5vw;
+  bottom: 2.7vw;
 }
 .tabley {
   position: relative;
@@ -846,7 +847,7 @@ input[type="email"] {
 }
 .tdy {
   position: relative;
-  left: 2%;
+  /* left: 2%; */
 }
 .iconsx{
   font-size: x-large;
@@ -1175,17 +1176,18 @@ input[type="email"] {
     overflow-x: hidden;
   }
   #a1 {
-  height: 120vh;
+  height: fit-content;
   background-color: black;
   color: white;
   padding-left: 5%;
-  display: flex;
+  display: block;
   overflow-x: hidden;
   padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 #a1 .head1{
-  font-size: 10vh;
+  font-size: 14vh;
   font-weight: 700;
    background: -webkit-linear-gradient(rgb(12, 27, 241), rgb(212, 98, 4));
   -webkit-background-clip: text;
@@ -1193,7 +1195,7 @@ input[type="email"] {
 }
 
 #a1 .head2{
-  font-size: 3.5vh;
+  font-size: 4.5vh;
   width: 100%;
   font-weight: 600;
 }
@@ -1204,23 +1206,26 @@ input[type="email"] {
 }
 
 #a1 .first{
-  font-size: 4.5vh;
+  font-size: 6vh;
   font-weight: 600;
+  font-weight: 700;
 }
 
 #a1 .second{
   font-size: 3vh;
-  width: 15vh;
+  width: 100%;
 }
 
 
 #a1 .cover2{
   padding-right: 5%;
   padding-top: 10%;
+    font-size: 10vh;
 }
 
 #a1 .one{
-  padding-bottom: 20%;
+  padding-bottom: 10%;
+
 }
 
 }
@@ -1359,4 +1364,11 @@ input[type="email"] {
     margin-bottom: 5%;
     transition: margin-left 1s, margin-top 1s;
   }
+}
+
+
+
+.findus22{
+  width: 55%;
+  padding-top: 5px;
 }

@@ -258,7 +258,19 @@ form input[type="checkbox"] {
 border: none;
 border-bottom: 2px solid grey;
 outline: none;
+/* padding: 20px; */
 }
+
+  .optionsConsult, .optionsMarket {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+  }
+
+  .optionsConsult.show, .optionsMarket.show {
+    max-height: 1000px; /* Adjust the value based on the maximum expected height of your options */
+  }
+
 
 label {
 display: block;
@@ -276,12 +288,17 @@ border: 1px solid #ccc;
 /* border-radius: 4px; */
 }
 
-.checkbox-button input[type="checkbox"] {
+.checkbox-button input[type="checkbox"],
+.checkbox-button1 input[type="checkbox"],
+.checkbox-button2 input[type="checkbox"]
+{
 display: none;
 }
-.checkbox-button {
+.checkbox-button,
+.checkbox-button1,
+.checkbox-button2{
   display: inline-block;
-  width: 100px;
+  width: 120px;
   padding: 10px;
   border: none;
   border-radius: 50px;
@@ -291,7 +308,12 @@ display: none;
   cursor: pointer;
 }
 
-.checkbox-button.yellow {
+
+
+.checkbox-button.yellow ,
+.checkbox-button1.yellow ,
+.checkbox-button2.yellow
+{
   background-color: yellow;
 }
 
@@ -344,15 +366,15 @@ input[type="submit"]:hover {
         <ul>
           <li class="logo-text" id="logodisapper">Webthree<span class="logo-symbol">®</span></li>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../pjt3_files/index.html">About Us</a></li>
-          <li><a href="../insights/index.html">Insights</a></li>
           <li>
             <a class="dropdown-arrow">Services</a>
             <ul class="sub-menus">
               <li><a href="../atomical1-main/consultancy.html">Consultancy</a></li>
-              <li><a href="../pjt 1/combined/index.html">Marketting</a></li>
+              <li><a href="../pjt 1/combined/index.html">Marketing</a></li>
             </ul>
           </li>
+          <li><a href="../insights/index.html">Insights</a></li>
+          <li><a href="../pjt3_files/index.html">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
           <!-- <li class="menu-button"><img src="img/menu2.png" style="height: 30px; padding-top: 10px;"></li> -->
         </ul>
@@ -368,30 +390,43 @@ input[type="submit"]:hover {
 
     <label for="checkboxes">Select Options:</label><br>
     <div class="checkbox-container">
-        <!-- <label for="option1" class="checkbox-button">
-          <input  type="checkbox" id="option1" name="option1"> Option 1
-        </label> -->
-        <label for="option1" class="checkbox-button">
-          <input type="checkbox" id="option1" name="option1"  onclick="toggleBackground(this)"> Option 1
-        </label>
-        <!-- Add more checkboxes and labels here -->
-        <label for="option2" class="checkbox-button">
-          <input type="checkbox" id="option2" name="option2" onclick="toggleBackground(this)"> Option 2
-        </label>
-        <!-- Add more checkboxes and labels here -->
-        <label for="option3" class="checkbox-button">
-          <input type="checkbox" id="option3" name="option3" onclick="toggleBackground(this)"> Option 3
-        </label>
-        <!-- Add more checkboxes here -->
-        <label for="option4" class="checkbox-button">
-            <input type="checkbox" id="option4" name="option4" onclick="toggleBackground(this)"> Option 4
-          </label>
 
-          <label for="option5" class="checkbox-button">
-            <input type="checkbox" id="option5" name="option5" onclick="toggleBackground(this)"> Option 5
-          </label>
-      </div>
-      <br>
+  <label for="option1" class="checkbox-button consultancybutton">
+    <input type="checkbox" id="option1" name="option1" onclick="toggleBackground(this); toggleOptions()" /> Consultancy
+  </label>
+
+  <label for="option2" class="checkbox-button">
+    <input type="checkbox" id="option2" name="option2" class="option22" onclick="toggleBackground(this); toggleOptions()" /> Marketing
+  </label>
+  <br>
+
+  <div class="optionsConsult">
+    <label for="option11" class="checkbox-button1">
+      <input type="checkbox" id="option11" name="option11" onclick="toggleBackground(this)" /> Option 1
+    </label>
+
+    <label for="option12" class="checkbox-button1">
+      <input type="checkbox" id="option12" name="option12" onclick="toggleBackground(this)" /> Option 2
+    </label>
+
+    <label for="option13" class="checkbox-button1">
+      <input type="checkbox" id="option13" name="option13" onclick="toggleBackground(this)" /> Option 3
+    </label>
+  </div>
+  <div class="optionsMarket">
+    <label for="option21" class="checkbox-button2">
+      <input type="checkbox" id="option21" name="option21" onclick="toggleBackground(this)" /> Option 1
+    </label>
+
+    <label for="option22" class="checkbox-button2">
+      <input type="checkbox" id="option22" name="option22" onclick="toggleBackground(this)" /> Option 2
+    </label>
+
+    <label for="option23" class="checkbox-button2">
+      <input type="checkbox" id="option23" name="option23" onclick="toggleBackground(this)" /> Option 3
+    </label>
+  </div>
+</div>
 
     <input type="text" id="first-name" name="first-name" placeholder="Name" required><br><br>
 
@@ -419,12 +454,36 @@ input[type="submit"]:hover {
     var label = checkbox.parentNode;
     if (checkbox.checked) {
       label.classList.add("yellow");
+
     } else {
       label.classList.remove("yellow");
     }
   }
-  
   </script>
+
+<script>
+  function toggleOptions() {
+    var option1Checkbox = document.getElementById('option1');
+    var option2Checkbox = document.getElementById('option2');
+    var optionsConsult = document.querySelector('.optionsConsult');
+    var optionsMarket = document.querySelector('.optionsMarket');
+
+    if (option1Checkbox.checked && option2Checkbox.checked) {
+      optionsConsult.classList.add('show');
+      optionsMarket.classList.add('show');
+    } else if (option1Checkbox.checked) {
+      optionsConsult.classList.add('show');
+      optionsMarket.classList.remove('show');
+    } else if (option2Checkbox.checked) {
+      optionsConsult.classList.remove('show');
+      optionsMarket.classList.add('show');
+    } else {
+      optionsConsult.classList.remove('show');
+      optionsMarket.classList.remove('show');
+    }
+  }
+</script>
+
 
 </body>
 </html>

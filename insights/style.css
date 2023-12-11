@@ -27,6 +27,8 @@ header {
   color: #fff;
   height: 60px;
   padding-right: 50px;
+  font-size: x-large;
+  padding-top: 10px;
 }
 
 
@@ -56,6 +58,7 @@ header {
 
 #menu .logo-text{
   padding-right: 15%;
+  font-size: larger;
 }
 
 #menu .logo-symbol{
