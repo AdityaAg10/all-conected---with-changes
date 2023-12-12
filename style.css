@@ -391,9 +391,12 @@ body {
   display: none;
 }
 
-#section66 {
+
+#section66{
+  /* min-height: 150vh; */
   height: 150vh;
-  padding-bottom: 10%;
+  padding-bottom: 8%;
+  min-width: 110vw;
 }
 .gallery {
   border-radius: 30px;
@@ -402,7 +405,7 @@ body {
   width: 520px;
   height: auto;
   position: relative;
-  left: 60%;
+  left: 50%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -589,14 +592,14 @@ body {
     width: 92%;
   }
   .popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  width: 90%;
-  max-width: 1600px;
-  height: 90vh;
-  max-height: 800px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 90%;
+    max-width: 1600px;
+    height: 90vh;
+    max-height: 800px;
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.75);
   display: flex;
@@ -606,6 +609,7 @@ body {
   overflow: hidden;
   transition: 1s;
   opacity: 0;
+  /* padding-bottom: 20%; */
 }
 
   .gallery {

@@ -28,10 +28,9 @@ header {
   padding-right: 50px;
 }
 
-
-#logodisapper{
+#logodisapper {
   display: none;
-   line-height: 60px;
+  line-height: 60px;
   text-decoration: none;
   color: #ffffff;
   font-size: 25px;
@@ -44,29 +43,28 @@ header {
   list-style: none;
   padding-left: 1%;
 }
-#menu ul{
+#menu ul {
   padding-left: 10%;
   width: 100%;
 }
 
-#menu .logo-text1{
+#menu .logo-text1 {
   display: none;
 }
 
-#menu .logo-text{
+#menu .logo-text {
   padding-right: 15%;
 }
 
-#menu .logo-symbol{
-  font-size: .6em;
+#menu .logo-symbol {
+  font-size: 0.6em;
   right: -0.7em;
 }
 
-#menu .menu-button{
+#menu .menu-button {
   margin-left: 20vh;
   padding: 0;
   margin-bottom: 0;
-
 }
 
 #menu li {
@@ -145,8 +143,6 @@ header {
   justify-content: space-between;
 }
 @media screen and (max-width: 800px) {
-
-
   #menu label {
     display: none;
     line-height: 45px;
@@ -199,28 +195,28 @@ header {
   #menu input:checked ~ ul {
     display: block;
   }
-  #menu .menu-button{
-  display: block;
-  padding-top: 0; 
-  padding-bottom: 10%;
-  margin-left: 20px;
-  margin-top: 5px; 
-}
+  #menu .menu-button {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 10%;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
 
-  #logodisapper{
+  #logodisapper {
     display: none;
   }
-#menu .logo-text{
-  display: none;
-}
+  #menu .logo-text {
+    display: none;
+  }
 
-#menu .logo-text1{
-  display: block;
-  position: absolute;
-  left: 20px;
-  top: 10px;
-  font-size: 4vh;
-}
+  #menu .logo-text1 {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 4vh;
+  }
 }
 
 /* section2 */
@@ -469,7 +465,9 @@ header {
   color: gray;
   line-height: 1.5;
 }
-
+.tablerx2 {
+  display: none;
+}
 .wrapper span {
   color: palevioletred;
 }
@@ -863,7 +861,7 @@ input[type="email"] {
   position: relative;
   left: 2%;
 }
-.iconsx{
+.iconsx {
   font-size: x-large;
 }
 #section4one {
@@ -871,6 +869,30 @@ input[type="email"] {
 }
 
 @media (max-width: 800px) {
+  .design h1 {
+    position: relative;
+    width: 100%;
+    right: 4%;
+    font-size: 8vw;
+    line-height: 1.5;
+    text-align: center;
+    line-height: normal;
+    color: #fff;
+    padding: 3%;
+  }
+  .design p {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.3;
+    color: gray;
+    width: 100%;
+    font-size: 5vw;
+    position: relative;
+    right: 2%;
+    text-align: center;
+    padding-bottom: 5%;
+  }
   #section4 {
     display: none;
   }
@@ -913,7 +935,12 @@ input[type="email"] {
     color: black;
     height: 10vh;
   }
-
+  .sec3im {
+    width: 95%;
+    margin-left: 2.5%;
+    position: relative;
+    top: 70px;
+  }
   .h1 {
     position: relative;
     width: 90%;
@@ -929,6 +956,17 @@ input[type="email"] {
 }
 
 @media screen and (max-width: 800px) {
+  .tablerx {
+    position: relative;
+    left: 7.5%;
+    /* top: 25.5%; */
+    width: 75%;
+    margin-top: 190px;
+    margin-bottom: 120px;
+    margin-left: 7.5%;
+    /* right: 8%; */
+  }
+
   .tabler {
     display: flex;
     flex-direction: column;
@@ -953,11 +991,38 @@ input[type="email"] {
   .tablehx,
   .tablepx {
     display: block;
-    padding: 10px;
+    padding: 5px;
+    /* font-size: 10vw; */
+  }
+  .tablep {
+    padding: 2%;
+    font-size: 3.5vw;
+    color: gray;
+    line-height: 1.5;
   }
   .tableimg {
     width: 100%;
     height: auto;
+    padding-right: 5%;
+  }
+  .tablerx {
+    display: none;
+  }
+  .tablerx2 {
+    display: block;
+    padding-top: 40%;
+    padding-bottom: 30%;
+    padding-left: 3.5%;
+    padding-right: 2.5%;
+  }
+  .tableh1 {
+    font-size: xx-large;
+  }
+  .tablep {
+    font-size: 2.2vh;
+  }
+  .tableimg {
+    padding-left: 5%;
   }
 }
 
