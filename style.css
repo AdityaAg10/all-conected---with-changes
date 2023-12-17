@@ -859,6 +859,10 @@ input[type="email"] {
   position: relative;
 }
 
+.icons{
+  padding-top: 5px;
+}
+
 .iconsx{
   font-size: x-large;
 }
