@@ -169,31 +169,10 @@
 
     <section id="section66">
       <p class="inpara">LET OUR DESIGN SPEAKS FOR YOUR AMBITION</p>
-
+      <div class="section66flex">
       <p class="parain2">
         ,,Immerse in our stunning Instagrm designs,meticulously crafted to
         tranform brand narratives into captivating visual journeys."
-      </p>
-
-      <div class="popup">
-        <!-- top bar -->
-        <div class="top-bar">
-          <p class="image-name">img111.jpg</p>
-          <span class="close-btn"></span>
-        </div>
-        <!-- arrows -->
-        <button class="arrow-btn left-arrow">
-          <img src="img/arrow.png" alt="" />
-        </button>
-        <button class="arrow-btn right-arrow">
-          <img src="img/arrow.png" alt="" />
-        </button>
-        <!-- image -->
-        <img src="img/img111.jpg" class="large-image" alt="" />
-        <!-- image-index -->
-        <h1 class="index">01</h1>
-      </div>
-      <!-- <div class="zxcv" > -->
       <div class="gallery">
         <div class="gallery-image">
           <img src="img/img111.jpg" alt="" class="image" class="imaged" />
@@ -283,6 +262,29 @@
           </button>
         </div>
       </div>
+      </div>
+      </p>
+
+      <div class="popup">
+        <!-- top bar -->
+        <div class="top-bar">
+          <p class="image-name">img111.jpg</p>
+          <span class="close-btn"></span>
+        </div>
+        <!-- arrows -->
+        <button class="arrow-btn left-arrow">
+          <img src="img/arrow.png" alt="" />
+        </button>
+        <button class="arrow-btn right-arrow">
+          <img src="img/arrow.png" alt="" />
+        </button>
+        <!-- image -->
+        <img src="img/img111.jpg" class="large-image" alt="" />
+        <!-- image-index -->
+        <h1 class="index">01</h1>
+      </div>
+      <!-- <div class="zxcv" > -->
+
       <script src="app.js"></script>
     </section>
 
@@ -674,6 +676,8 @@
                 <p>+ Find Us</p>
                 <p class="findus22"><strong>corp. address- </strong>Room no. 169, Floor 1, Rohini, New Delhi- 110089</p>
                 <p class="findus22"><strong> regd. address- </strong> Plot 5, Pocket I, Sector 4, Bawana Industrial Area, Bawana, Delhi- 110039</p>
+                <p class="findus22"><strong> Phone Number- </strong>80038xxxxx</p>
+                <p class="findus22"><strong> Email-</strong> Test.Email@gmail.com</p>
               </div>
             </td>
           </tr>
@@ -736,6 +740,24 @@
     .setTween(".cover2 .threee", 2.5, { innerHTML: "30", ease: "linear.easeNone", roundProps: "innerHTML" })
     .addTo(controller);
   });
+</script>
+
+<script>
+// Check if the zoom level is 125%
+function checkZoomLevel() {
+    const zoomLevel = window.devicePixelRatio;
+
+    console.log('Zoom Level:', zoomLevel);
+
+    if (zoomLevel === 1.25) {
+        console.log('Adding class zoom125');
+        document.documentElement.classList.add('zoom125');
+    } else {
+        console.log('Removing class zoom125');
+        document.documentElement.classList.remove('zoom125');
+    }
+}
+
 </script>
 
   </body>

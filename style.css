@@ -391,21 +391,26 @@ body {
   display: none;
 }
 
-
 #section66{
   /* min-height: 150vh; */
   height: 150vh;
-  padding-bottom: 8%;
-  min-width: 110vw;
+  /* padding-bottom: 8%; */
+  width: 110vw;
+  /* max-height: 150vh; */
+}
+
+.section66flex{
+  display: flex;
 }
 .gallery {
   border-radius: 30px;
   border: 2px solid black;
-  bottom: 70%;
+  /* bottom: 80vh; */
+  top: 75px;
   width: 520px;
   height: auto;
   position: relative;
-  left: 50%;
+  left: 7%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -436,9 +441,9 @@ body {
     top: 180px;
     left: 120px; */
   margin-top: 180px;
-  margin-left: 120px;
-  font-size: 4rem;
-  width: 39%;
+  margin-left: 60px;
+  font-size: 3rem;
+  width: 35%;
 }
 .popup {
   position: fixed;
@@ -844,6 +849,7 @@ input[type="email"] {
   position: relative;
   left: 72%;
   bottom: 130px;
+  border-spacing: 0;
 }
 .tablex {
   position: relative;
@@ -851,10 +857,17 @@ input[type="email"] {
 }
 .tdy {
   position: relative;
-  /* left: 2%; */
 }
+
 .iconsx{
   font-size: x-large;
+}
+.findus22{
+  width: 55%;
+  padding-top: 5px;
+}
+.findus{
+  max-width: 90%;
 }
 
 @media screen and (max-width: 800px) {
@@ -1372,7 +1385,3 @@ input[type="email"] {
 
 
 
-.findus22{
-  width: 55%;
-  padding-top: 5px;
-}
