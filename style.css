@@ -578,20 +578,24 @@ body {
   #section66 {
     height: 200vh;
   }
+  .section66flex{
+  display: block;
+}
   .inpara {
     position: relative;
-    font-size: 45px;
-    width: 90%;
+    font-size: 40px;
+    width: 92.5%;
     margin-top: 50px;
     text-align: center;
     font-weight: 500;
-    margin-left: 5%;
+    /* margin-left: 2.5%; */
+    margin-right: 5%;
   }
   .parain2 {
     margin-top: 50px;
     position: relative;
     margin-bottom: 40px;
-    margin-left: 5%;
+    margin-left: 10%;
     padding-right: 5%;
     font-size: 2rem;
     width: 92%;
@@ -620,12 +624,12 @@ body {
   .gallery {
     border-radius: 30px;
     border: 2px solid black;
-    bottom: 595px;
-    width: 90%;
+    /* bottom: 595px; */
+    width: 85%;
     height: auto;
     position: relative;
     margin-bottom: 60px;
-    left: 6%;
+    left: 3%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -794,9 +798,14 @@ p {
   left: 2%;
 } */
 .td1 {
-  padding-left: 10%;
+  padding-left: 5%;
   padding-right: 10%;
   width: 30%;
+}
+.td13{
+  position: relative;
+   width: 30%;
+   padding-top: 2.5%;
 }
 .anchortags {
   position: relative;
@@ -983,30 +992,57 @@ input[type="email"] {
   .texta .marketing {
     right: 25%;
   }
+  .td13{
+  position: relative;
+   width: 30%;
+   padding-top: 30%;
+   right: 5%;
+}
 }
 
 @media screen and (max-width: 800px) {
+  #section100{
+    height: 120vh;
+  }
   .letstalk p {
-    font-size: 3.5rem;
+    font-size: 5.5rem;
   }
   .tablex td {
     font-size: 0.8rem;
     width: 30%;
   }
+  .tablex{
+    bottom: 50px;
+  }
   .tabley {
     position: relative;
-    position: 72%;
+    /* position: 72%; */
+    bottom: 50px;
+    left: 5%;
+    /* padding-top: 15%; */
   }
   .tabley td {
     font-size: 0.8rem;
   }
   .anchortags a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .anchortags {
     position: relative;
+    left: 69%;
     bottom: 2%;
+    width: 30%;
+    top: 0px;
   }
+  input {
+  position: relative;
+  left: 5%;
+  bottom: 110px;
+  text-decoration: none;
+}
+.input-container {
+ width: 30rem;
+}
   input[type="email"] {
     padding: 10px;
     border: 1px solid #000000;
@@ -1019,9 +1055,15 @@ input[type="email"] {
   }
   .submit {
     position: relative;
-    left: 20%;
-    top: 3px;
+    left: 11%;
+    /* top: 3px; */
+    bottom: 120px;
   }
+  .findus22{
+    /* padding-top: 20px; */
+  width: 50%;
+  padding-top: 5px;
+}
 }
 
 .sec2{
