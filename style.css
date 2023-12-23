@@ -697,6 +697,11 @@ p {
   position: relative;
   left: 90px;
 }
+.bgimage{
+  width: 100%;
+  height: 150vh;
+}
+
 #bgimagex {
   position: relative;
   left: 7%;
@@ -718,11 +723,19 @@ p {
   background-color: white;
   overflow: hidden;
 }
+
+.patti1{
+  width: 100%;
+  /* height: 30vh; */
+  display: block;
+}
+
 .yellow {
+  display: none;
   position: relative;
-  bottom: 5%;
+  /* bottom: 5%; */
   color: black;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: start;
   font-size: 2.5vw;
@@ -730,13 +743,16 @@ p {
   background-color: white;
   transform: rotate(16deg);
   background-size: contain;
-  right: 25px;
+  padding-top: 1%;
+  right: 45px;
   height: 80px;
   font-weight: 700;
   z-index: 100;
   letter-spacing: 2px;
+  margin-top: 2.5%;
 }
 .white {
+  display: none;
   letter-spacing: 2px;
   padding-top: 0.6%;
   padding-bottom: 3%;
@@ -744,14 +760,15 @@ p {
   position: relative;
   color: black;
   bottom: 130px;
-  display: flex;
+  /* display: flex; */
   /* align-items: center; */
   justify-content: start;
   font-size: 2.5vw;
   width: max-content;
   left: -50px;
+  margin-top: 1%;
   background-color: yellow;
-  transform: rotate(-14deg);
+  transform: rotate(-13deg);
   right: 25px;
   height: 80px;
 }
@@ -766,7 +783,9 @@ p {
   font-size: 27px;
   display: flex;
   position: relative;
-  /* bottom: 33px; */
+  margin: 0;
+  padding: 0;
+  bottom: 50px;
 }
 .contactlink p {
   position: relative;
@@ -888,31 +907,48 @@ input[type="email"] {
     height: 1px;
   }
   #section88 {
-    height: 30vh;
+    height: 25vh;
   }
+  .patti1{
+  width: 100%;
+  padding-top: 5%;
+  display: none;
+}
+.bgimage{
+  width: 100%;
+  height: 80vh;
+}
+
   .yellow {
     height: 30px;
     position: relative;
-    top: 85px;
+    top: 150px;
     color: black;
     display: flex;
     align-items: center;
     justify-content: start;
-    font-size: 2.5vw;
+    font-size: 4vw;
     width: max-content;
     background-color: white;
-    transform: rotate(14deg);
+    transform: rotate(20deg);
     background-size: contain;
     right: 100px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
   .white {
-    transform: rotate(-11deg);
-    top: 90px;
+    display: flex;
+    font-size: 4vw;
+    letter-spacing: 1px;
+    transform: rotate(-15deg);
+    top: 55px;
     padding-top: 1.5%;
     height: 30px;
+    margin-top: 2%;
     left: -130px;
+  }
+  .contactlink {
+    bottom: 0px;
   }
 
   #section11 {
@@ -1002,10 +1038,11 @@ input[type="email"] {
 
 @media screen and (max-width: 800px) {
   #section100{
-    height: 120vh;
+    height: 50vh;
   }
   .letstalk p {
     font-size: 5.5rem;
+    padding-top: 5%;
   }
   .tablex td {
     font-size: 0.8rem;
@@ -1017,7 +1054,7 @@ input[type="email"] {
   .tabley {
     position: relative;
     /* position: 72%; */
-    bottom: 50px;
+    bottom: 200px;
     left: 5%;
     /* padding-top: 15%; */
   }
@@ -1036,12 +1073,15 @@ input[type="email"] {
   }
   input {
   position: relative;
-  left: 5%;
-  bottom: 110px;
+  left: 63%;
+  bottom: -50px;
   text-decoration: none;
 }
+  input::placeholder {
+    font-size: 0.8rem;
+  }
 .input-container {
- width: 30rem;
+ width: 24rem;
 }
   input[type="email"] {
     padding: 10px;
@@ -1055,9 +1095,9 @@ input[type="email"] {
   }
   .submit {
     position: relative;
-    left: 11%;
+    left: 69%;
     /* top: 3px; */
-    bottom: 120px;
+    bottom: -35px;
   }
   .findus22{
     /* padding-top: 20px; */

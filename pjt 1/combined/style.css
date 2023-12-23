@@ -3,18 +3,22 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  max-width: 100vw;
 }
 
-/* html {
-  height: 100%;
-} */
+html {
+  /* height: 100%; */
+  width: 100%;
+  overflow-x: hidden;
+}
 
 #menu {
   background: #000000;
   color: #fff;
   height: 60px;
   padding-right: 50px;
+  overflow-x: hidden;
 }
 
 
@@ -220,6 +224,8 @@ body {
   /* width: 100%; */
   padding-top: 5%;
   padding-bottom: 10%;
+  width: 100%;
+  /* overflow-x: hidden; */
 }
 
 .para label {
@@ -278,6 +284,8 @@ body {
 
 .col {
   background-color: #f0f0f0;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 .parallax {
@@ -340,6 +348,7 @@ body {
   color: white;
   display: block;
   position: relative; /* Add position relative to the container */
+  overflow: hidden;
 }
 
 .learn hr {
@@ -368,7 +377,8 @@ body {
 }
 
 .learn .hh1 {
-  width: fit-content;
+  width: 100%;
+  overflow-x: hidden;
   font-size: 1.5vw;
   padding: 5px;
   position: relative;
@@ -529,6 +539,7 @@ body {
 /* next page */
 .container12 {
   display: block;
+  overflow-x: hidden;
 }
 
 .ptwo {
@@ -669,6 +680,7 @@ body {
 #section100{
   background-color: white;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .letstalk {
@@ -864,6 +876,7 @@ input[type="email"] {
   /* padding: 40px; */
   width: 70%;
   height: auto;
+  overflow-x: hidden;
   color: #fff;
 }
 
@@ -1040,4 +1053,195 @@ input[type="email"] {
 .divp1 {
   font-size: 23px;
   color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#horizontal-section {
+  left: 0;
+}
+
+
+.sticky-wrapper {
+  width: 100%;
+  top: 1px;
+  position: sticky;
+  overflow: hidden;
+}
+.element-wrapper{
+  position: relative;
+  display: flex;
+}
+
+.charity {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: red; */
+  flex-shrink: 0;
+  display: flex;
+}
+
+
+.slideshowimg{
+  width: 100vw;
+  z-index: -1;
+  /* opacity: br; */filter: brightness(75%);
+}
+
+
+.char11{
+  position: absolute;
+  color: white;
+  font-size: 8vh;
+  bottom: 120px;
+  padding-left: 5%;
+  white-space: nowrap;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.char12{
+  position: absolute;
+  color: white;
+  font-size: 2.6vh;
+  bottom: 50px;
+  width: 45%;
+  font-weight: 500;
+  padding-left: 5%;
+  z-index: 1;
+}
+
+.char112{
+  margin-left: 2%;
+}
+
+.char13{
+  position: absolute;
+  color: white;
+  font-size: 2.6vh;
+  bottom: 120px;
+  left: 85%;
+  border: 0.1px solid rgb(255, 255, 255, 0.5);
+  width: fit-content;
+  font-weight: 300;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  z-index: 1;
+}
+
+.char23{
+  position: fixed;
+  color: white;
+  font-size: 2.6vh;
+  /* bottom: 120px; */
+  bottom: 120px;
+  /* left: 50px; */
+  margin-left: 85%;
+  border: 0.1px solid rgb(255, 255, 255, 0.5);
+  width: fit-content;
+  font-weight: 300;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  z-index: 1;
+  height: fit-content;
+}
+
+.char14{
+   position: absolute;
+  color: white;
+  font-size: 2.6vh;
+  bottom: 60px;
+  left: 67%;
+  border: 0.1px solid rgb(255, 255, 255, 0.5);
+  width: fit-content;
+  font-weight: 300;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  z-index: 1;
+}
+.char15{
+ position: absolute;
+  color: white;
+  font-size: 2.6vh;
+  bottom: 60px;
+  left: 80%;
+  border: 0.1px solid rgb(255, 255, 255, 0.5);
+  width: fit-content;
+  font-weight: 300;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  z-index: 1;
+}
+
+.char24{
+  position: fixed;
+  color: white;
+  font-size: 2.6vh;
+  /* bottom: 120px; */
+  bottom: 60px;
+  /* left: 50px; */
+  margin-left: 68%;
+  white-space: nowrap;
+  border: 0.1px solid rgb(255, 255, 255, 0.5);
+  width: fit-content;
+  font-weight: 300;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  z-index: 1;
+  height: fit-content;
+}
+.char25{
+  position: fixed;
+  white-space: nowrap;
+  color: white;
+  font-size: 2.6vh;
+  /* bottom: 120px; */
+  bottom: 60px;
+  /* left: 50px; */
+  margin-left: 80%;
+  border: 0.1px solid rgb(255, 255, 255, 0.5);
+  width: fit-content;
+  font-weight: 300;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  z-index: 1;
+  height: fit-content;
+}
+
+.char16{
+  position: absolute;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  height: 60px;
+  padding-top: 20px;
+  width: 80px;
+  font-weight: 1000;
+  word-wrap: break;
+  align-items: center;
+  pointer-events: none;
+  text-align: center;
+  border: 2px solid white;
 }

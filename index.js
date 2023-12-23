@@ -8,11 +8,13 @@ gsap.to(panels, {
   scrollTrigger: {
     trigger: ".Mwrap",
     pin: true,
-    scrub: 1,
-    snap: 1,
+    scrub: 0.5,
+    snap: 0.1,
     end: () => "+=" + document.querySelector(".Mwrap").offsetWidth / 2 // Divide offsetWidth by 2 for two divs
   }
 });
+
+
 
 
 
