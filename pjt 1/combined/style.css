@@ -1231,7 +1231,7 @@ input[type="email"] {
 }
 
 .char16{
-  position: absolute;
+  position: fixed;
   color: black;
   background-color: white;
   border-radius: 50%;
@@ -1244,4 +1244,48 @@ input[type="email"] {
   pointer-events: none;
   text-align: center;
   border: 2px solid white;
+  /* display: none; */
+  /* transform: translate(-50%, -50%);
+  transition: .1s; */
+}
+
+ .char26, .char36, .char46{
+  position: fixed;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  height: 60px;
+  padding-top: 20px;
+  width: 80px;
+  font-weight: 1000;
+  word-wrap: break;
+  align-items: center;
+  pointer-events: none;
+  text-align: center;
+  border: 2px solid white;
+   /* display: none; */
+   /* transform: translate(-50%, -50%);
+  transition: .5s; */
+}
+
+.cursor{
+  top: 0px;
+  left: 0px;
+  position: fixed;
+}
+
+.dot{
+  top: -20px;
+  left: -20px;
+  position: fixed;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #C05C54;
+  z-index: 9999;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  will-change: transform;
+  transform: scale(1);
+  transition: 0.2s all;
 }
