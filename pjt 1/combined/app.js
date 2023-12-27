@@ -12,11 +12,13 @@ horizontalSection.style.height = horizontalLength + "px";
 
 var char16 = document.querySelector(".char16");
 var char26 = document.querySelector(".char26");
+var char36 = document.querySelector(".char36");
+var char46 = document.querySelector(".char46");
 var elementOffset = horizontalSection.offsetTop;
 
 window.onscroll = function (e) {
   var scrollTopp = window.scrollY;
-  console.log(scrollTopp-elementOffset);
+  // console.log(scrollTopp-elementOffset);
   
   if (scrollTopp >= distFromTop && scrollTopp <= scrollDistance) {
     // Use translateX with the correct syntax
@@ -24,7 +26,7 @@ window.onscroll = function (e) {
     "translateX(-" + (scrollTopp - distFromTop) + "px)";
     
     // Position char16 and char26 based on mouse position
-    console.log(elementOffset)
+    // console.log(elementOffset)
     char16.style.top = scrollTopp + "px";
     char26.style.top = scrollTopp + "px";
     char16.style.left = scrollTopp - distFromTop + "px";
@@ -51,4 +53,25 @@ window.onscroll = function (e) {
   charitty2.addEventListener("mouseleave", function () {
     char26.style.display = "none";
   });
+
+  var charitty3 = document.querySelector("#charitty3");
+  charitty3.addEventListener("mousemove", function (event) {
+    char36.style.top = event.clientY + "px";
+    char36.style.left = (event.clientX+scrollTopp-distFromTop) + "px";
+    char36.style.display = "block";
+  });
+  charitty3.addEventListener("mouseleave", function () {
+    char36.style.display = "none";
+  });
+
+  var charitty4 = document.querySelector("#charitty4");
+  charitty4.addEventListener("mousemove", function (event) {
+    char46.style.top = event.clientY + "px";
+    char46.style.left = (event.clientX+scrollTopp-distFromTop) + "px";
+    char46.style.display = "block";
+  });
+  charitty4.addEventListener("mouseleave", function () {
+    char46.style.display = "none";
+  });
 };
+

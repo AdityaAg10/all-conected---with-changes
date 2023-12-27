@@ -1244,13 +1244,13 @@ input[type="email"] {
   pointer-events: none;
   text-align: center;
   border: 2px solid white;
-  /* display: none; */
-  /* transform: translate(-50%, -50%);
-  transition: .1s; */
+  display: none;
+  transform: translate(-50%, -50%);
+  transition: .1s;
 }
 
  .char26, .char36, .char46{
-  position: fixed;
+  position: absolute;
   color: black;
   background-color: white;
   border-radius: 50%;
@@ -1263,9 +1263,9 @@ input[type="email"] {
   pointer-events: none;
   text-align: center;
   border: 2px solid white;
-   /* display: none; */
-   /* transform: translate(-50%, -50%);
-  transition: .5s; */
+   display: none;
+   transform: translate(-50%, -50%);
+  transition: .1s;
 }
 
 .cursor{
