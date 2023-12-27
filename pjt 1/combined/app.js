@@ -27,14 +27,14 @@ window.onscroll = function (e) {
     console.log(elementOffset)
     char16.style.top = scrollTopp + "px";
     char26.style.top = scrollTopp + "px";
-    char16.style.left = scrollTopp-elementOffset + "px";
-    char26.style.left = scrollTopp-elementOffset + "px";
+    char16.style.left = scrollTopp - distFromTop + "px";
+    char26.style.left = scrollTopp - distFromTop + "px";
   }
 
   var charitty1 = document.querySelector("#charitty1");
   charitty1.addEventListener("mousemove", function (event) {
     char16.style.top = event.clientY + "px";
-    char16.style.left = scrollTopp-elementOffset + "px";
+    char16.style.left = event.clientX+scrollTopp-distFromTop + "px";
 
     char16.style.display = "block";
   });
@@ -45,7 +45,7 @@ window.onscroll = function (e) {
   var charitty2 = document.querySelector("#charitty2");
   charitty2.addEventListener("mousemove", function (event) {
     char26.style.top = event.clientY + "px";
-    char26.style.left = scrollTopp-elementOffset + "px";
+    char26.style.left = (event.clientX+scrollTopp-distFromTop) + "px";
     char26.style.display = "block";
   });
   charitty2.addEventListener("mouseleave", function () {

@@ -1231,7 +1231,7 @@ input[type="email"] {
 }
 
 .char16{
-  position: fixed;
+  position: absolute;
   color: black;
   background-color: white;
   border-radius: 50%;
@@ -1240,7 +1240,7 @@ input[type="email"] {
   width: 80px;
   font-weight: 1000;
   word-wrap: break;
-  align-items: center;
+  /* align-items: center; */
   pointer-events: none;
   text-align: center;
   border: 2px solid white;
