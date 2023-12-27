@@ -8,7 +8,7 @@ var distFromTop = horizontalSection.offsetTop;
 var scrollDistance = distFromTop + horizontalLength - windowWidth;
 
 // Set the height of #horizontal-section to horizontalLength
-horizontalSection.style.height = horizontalLength + "px";
+horizontalSection.style.height = horizontalLength-600 + "px";
 
 var char16 = document.querySelector(".char16");
 var char26 = document.querySelector(".char26");

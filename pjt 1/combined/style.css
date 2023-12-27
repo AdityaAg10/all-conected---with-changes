@@ -348,6 +348,7 @@ html {
   color: white;
   display: block;
   position: relative; /* Add position relative to the container */
+  /* bottom: 90vh; */
   overflow: hidden;
 }
 
@@ -543,6 +544,8 @@ html {
 }
 
 .ptwo {
+  /* top: 150px; */
+  margin-top: 20vh;
   text-align: center;
   display: block;
   background-color: #fcdc49;
@@ -552,15 +555,16 @@ html {
 }
 
 .ctext {
-  padding-top: 60px;
+  padding-top: 80px;
   padding-bottom: 100px;
 }
 
 .ctext .t1 {
-  font-size: 12dvw;
+  color: black;
+  font-size: 15vw;
   width: 100%;
   font-stretch: 200%;
-  line-height: 0.8;
+  line-height: 0.7;
   margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -679,8 +683,9 @@ html {
 
 #section100{
   background-color: white;
-  height: 100vh;
-  overflow-x: hidden;
+  height: fit-content;
+  color: black;
+  /* overflow-x: hidden; */
 }
 
 .letstalk {
@@ -690,7 +695,7 @@ html {
 }
 .letstalk p {
   position: relative;
-  bottom: -20px;
+  /* bottom: -20px; */
   font-size: 180px;
 }
 /* .footer1 table{
@@ -831,7 +836,7 @@ input[type="email"] {
   font-weight: bold;
   letter-spacing: 0.1rem;
   text-align: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .containerxyzx p span.typed-text {
   font-weight: normal;
@@ -876,7 +881,7 @@ input[type="email"] {
   /* padding: 40px; */
   width: 70%;
   height: auto;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   color: #fff;
 }
 
@@ -1069,6 +1074,7 @@ input[type="email"] {
 
 #horizontal-section {
   left: 0;
+  top: 100vh;
 }
 
 
@@ -1085,7 +1091,7 @@ input[type="email"] {
 
 .charity {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   /* background-color: red; */
   flex-shrink: 0;
   display: flex;
@@ -1094,6 +1100,7 @@ input[type="email"] {
 
 .slideshowimg{
   width: 100vw;
+  height: 100vh;
   z-index: -1;
   /* opacity: br; */filter: brightness(75%);
 }
