@@ -1041,8 +1041,9 @@ input[type="email"] {
     height: 50vh;
   }
   .letstalk p {
-    font-size: 5.5rem;
+    font-size: 5rem;
     padding-top: 5%;
+    white-space: nowrap;
   }
   .tablex td {
     font-size: 0.8rem;

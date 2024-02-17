@@ -18,7 +18,6 @@ html {
   color: #fff;
   height: 60px;
   padding-right: 50px;
-  overflow-x: hidden;
 }
 
 
@@ -138,14 +137,7 @@ html {
   justify-content: space-between;
 }
 @media screen and (max-width: 800px) {
-  html,
-body {
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  max-width: 100vw;
-}
+
 
   #menu label {
     display: none;
@@ -222,6 +214,7 @@ body {
   font-size: 4vh;
 }
 }
+
 
 .para {
   display: inline-block;

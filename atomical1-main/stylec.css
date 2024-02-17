@@ -902,6 +902,9 @@ input[type="email"] {
     padding-bottom: 10%;
     padding-right: 2.5%;
     padding-top: 10%;
+    background-color: black;
+    color: white;
+    font-size: 90%;
   }
   #section4one button {
     margin-top: 2.5%;
@@ -912,6 +915,7 @@ input[type="email"] {
   }
   #section4one h3 {
     padding-left: 2.5%;
+    padding-top: 1%;
   }
   #section4one p {
     padding-left: 2.5%;
@@ -922,6 +926,8 @@ input[type="email"] {
     padding-left: 2.5%;
     padding-bottom: 1%;
     margin-bottom: 20%;
+    border-radius: 10px;
+    border: solid black;
   }
 
   #section4one .imgg {
