@@ -154,7 +154,7 @@ header {
     text-align: right;
     position: absolute;
     /* left: auto; */
-    right: 40px; /* Added */
+    right: 40px;
   }
   #menu {
     position: relative;
@@ -169,12 +169,16 @@ header {
     height: auto;
     display: none;
   }
+  
   #menu ul.sub-menus {
-    width: 100%;
-    position: static;
+    width: 150%;
+    /* height: fit-content; */
+    transform: translateX(-50px) translateY(-45px);
+    position: relative;
+    height: auto;
   }
   #menu ul.sub-menus a {
-    padding-left: 30px;
+    padding-left: 55px;
   }
   #menu li {
     display: block;
@@ -222,6 +226,45 @@ header {
   top: 10px;
   font-size: 4vh;
 }
+#menu a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 0px;
+}
+/* 
+#menu a.navYY {
+  transform: translateY(-25px);
+} */
+/* #menu ul.sub-menus {
+  height: auto;
+  margin-top: 0px;
+  overflow: hidden;
+  width: fit-content;
+  background: #444444;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+#menu ul.sub-menus li {
+  display: block;
+  width: 100%;
+}
+#menu ul.sub-menus a {
+  color: #ffffff;
+  font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+  display: block;
+  justify-items: center;
+}
+#menu ul.sub-menus a:hover {
+  padding-left: 50px;
+  padding-right: 50px;
+  background: #f2f2f2;
+  color: #444444;
+} */
+
 }
 
 
